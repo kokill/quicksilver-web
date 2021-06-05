@@ -10,6 +10,7 @@ export default function NavbarComponent() {
   };
   return (
     <>
+    {/* Navbar blur light */}
       <div className="container position-sticky z-index-sticky top-0">
         <div className="row">
           <div className="col-12">
@@ -162,7 +163,7 @@ export default function NavbarComponent() {
                   <ul className="navbar-nav d-lg-block d-none">
                     <li className="nav-item">
                       <Link href="/contact">
-                        <a class="btn btn-sm bg-gradient-primary btn-round mb-0 me-1">
+                        <a className="btn btn-sm bg-gradient-primary btn-round mb-0 me-1">
                           Contact US
                         </a>
                       </Link>
@@ -174,6 +175,7 @@ export default function NavbarComponent() {
           </div>
         </div>
       </div>
+      {/* Navbar blur light */}
     </>
   );
 }
