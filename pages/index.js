@@ -9,6 +9,13 @@ import {
   faFeatherAlt,
   faChalkboardTeacher,
 } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -167,16 +174,18 @@ export default function Home() {
       {/* Read more about us section */}
 
       {/* Auticare variants section */}
-      <section class="py-7">
-        <div class="container">
+      <section className="py-7">
+        <div className="container">
           {/* Item */}
-          <div class="row">
-            <div class="col-lg-6 col-md-8 order-2 order-md-2 order-lg-1">
-              <div class="position-relative ms-md-5 mb-0 mb-md-7 mb-lg-0 d-none d-md-block d-lg-block d-xl-block h-75">
+          <div className="row">
+            <div className="col-lg-6 col-md-8 order-2 order-md-2 order-lg-1">
+              <div className="position-relative ms-md-5 mb-0 mb-md-7 mb-lg-0 d-none d-md-block d-lg-block d-xl-block h-75">
                 <div
-                  class="bg-gradient-info w-100 h-100 border-radius-xl position-absolute"
+                  className="glassmorphic w-100 h-100 border-radius-xl position-absolute"
                   alt=""
                 ></div>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary top-right gc-sm"></span>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-left gc-bg"></span>
                 <img
                   src="/images/autilite-content-cover.jpeg"
                   alt="Autilite home based therapy"
@@ -184,13 +193,13 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div class="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">
-              <div class="p-3 pt-0">
-                <div class="icon icon-shape bg-gradient-info rounded-circle shadow text-center mb-4">
+            <div className="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">
+              <div className="p-3 pt-0">
+                <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
                   <FontAwesomeIcon className="ni text-sm" icon={faFeatherAlt} />
                 </div>
-                <h4 class="text-gradient text-info mb-0">Autilite</h4>
-                <h4 class="mb-4">Home based therapy</h4>
+                <h4 className="text-gradient text-primary mb-0">Autilite</h4>
+                <h4 className="mb-4">Home based therapy</h4>
                 <p>
                   Autilite can be your perfect home partner which is feasible VR
                   based Assistive Technology, which enhances cognitive, motor,
@@ -200,25 +209,25 @@ export default function Home() {
                   you need to appreciate every moment. A lot of people don’t
                   appreciate the moment until it’s passed.
                 </p>
-                <a href="javascript:;" class="text-dark icon-move-right">
+                <a href="#" className="text-dark icon-move-right">
                   More about us
-                  <i class="fas fa-arrow-right text-sm ms-1"></i>
+                  <i className="fas fa-arrow-right text-sm ms-1"></i>
                 </a>
               </div>
             </div>
           </div>
           {/* Item */}
           {/* Item */}
-          <div class="row mt-0 mt-md-5 mt-lg-8">
-            <div class="col-lg-5 col-md-12 me-auto">
-              <div class="p-3 pt-0">
-                <div class="icon icon-shape bg-gradient-warning rounded-circle shadow text-center mb-4">
+          <div className="row mt-0 mt-md-5 mt-lg-8">
+            <div className="col-lg-5 col-md-12 me-auto">
+              <div className="p-3 pt-0">
+                <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
                   <FontAwesomeIcon className="ni text-sm" icon={faClipboard} />
                 </div>
-                <h4 class="text-gradient text-warning mb-0">
+                <h4 className="text-gradient text-primary mb-0">
                   Auticare Standard
                 </h4>
-                <h4 class="mb-4">Stand up for every move</h4>
+                <h4 className="mb-4">Stand up for every move</h4>
                 <p>
                   Society has put up so many boundaries, so many limitations on
                   what’s right and wrong that it’s almost impossible to get a
@@ -228,21 +237,23 @@ export default function Home() {
                   instantly become a gay two-year-old. Why would anyone pick
                   blue over pink? Pink is obviously a better color.
                 </p>
-                <a href="javascript:;" class="text-dark icon-move-right">
+                <a href="#" className="text-dark icon-move-right">
                   More about us
-                  <i class="fas fa-arrow-right text-sm ms-1"></i>
+                  <i className="fas fa-arrow-right text-sm ms-1"></i>
                 </a>
               </div>
             </div>
-            <div class="col-lg-6 col-md-8">
-              <div class="position-relative ms-md-5 d-none d-md-block d-lg-block d-xl-block h-75">
+            <div className="col-lg-6 col-md-8">
+              <div className="position-relative ms-md-5 d-none d-md-block d-lg-block d-xl-block h-75">
                 <div
-                  class="w-100 h-100 bg-gradient-warning border-radius-xl position-absolute"
+                  className="w-100 h-100 glassmorphic border-radius-xl position-absolute"
                   alt=""
                 ></div>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary top-left gc-sm"></span>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-right gc-bg"></span>
                 <img
                   src="/images/auticare-standard-content-cover.jpeg"
-                  class="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
+                  className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
                   alt=""
                 />
               </div>
@@ -250,29 +261,31 @@ export default function Home() {
           </div>
           {/* Item */}
           {/* Item */}
-          <div class="row mt-lg-8">
-            <div class="col-lg-6 col-md-8 order-2 order-md-2 order-lg-1">
-              <div class="position-relative ms-md-5 mb-0 mb-md-7 mb-lg-0 d-none d-md-block d-lg-block d-xl-block h-75">
+          <div className="row mt-lg-8">
+            <div className="col-lg-6 col-md-8 order-2 order-md-2 order-lg-1">
+              <div className="position-relative ms-md-5 mb-0 mb-md-7 mb-lg-0 d-none d-md-block d-lg-block d-xl-block h-75">
                 <div
-                  class="bg-gradient-success w-100 h-100 border-radius-xl position-absolute"
+                  className="glassmorphic w-100 h-100 border-radius-xl position-absolute"
                   alt=""
                 ></div>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary top-right gc-sm"></span>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-left gc-bg"></span>
                 <img
                   src="/images/auticare-premium-content-cover.jpeg"
-                  class="w-100 border-radius-xl mt-6 ms-5 position-absolute"
+                  className="w-100 border-radius-xl mt-6 ms-5 position-absolute"
                   alt=""
                 />
               </div>
             </div>
-            <div class="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">
-              <div class="p-3 pt-0">
-                <div class="icon icon-shape bg-gradient-success rounded-circle shadow text-center mb-4">
+            <div className="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">
+              <div className="p-3 pt-0">
+                <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
                   <FontAwesomeIcon className="ni text-sm" icon={faCrown} />
                 </div>
-                <h4 class="text-gradient text-success mb-0">
+                <h4 className="text-gradient text-primary mb-0">
                   Auticare Premium
                 </h4>
-                <h4 class="mb-4">Refreshing workspace atmosphere</h4>
+                <h4 className="mb-4">Refreshing workspace atmosphere</h4>
                 <p>
                   We’re not always in the position that we want to be at. We’re
                   constantly growing. We’re constantly making mistakes. We’re
@@ -282,28 +295,28 @@ export default function Home() {
                   you need to appreciate every moment. A lot of people don’t
                   appreciate the moment until it’s passed.
                 </p>
-                <a href="javascript:;" class="text-dark icon-move-right">
+                <a href="#" className="text-dark icon-move-right">
                   More about us
-                  <i class="fas fa-arrow-right text-sm ms-1"></i>
+                  <i className="fas fa-arrow-right text-sm ms-1"></i>
                 </a>
               </div>
             </div>
           </div>
           {/* Item */}
           {/* Item */}
-          <div class="row mt-0 mt-md-5 mt-lg-8">
-            <div class="col-lg-5 col-md-12 me-auto">
-              <div class="p-3 pt-0">
-                <div class="icon icon-shape bg-gradient-danger rounded-circle shadow text-center mb-4">
+          <div className="row mt-0 mt-md-5 mt-lg-8">
+            <div className="col-lg-5 col-md-12 me-auto">
+              <div className="p-3 pt-0">
+                <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
                   <FontAwesomeIcon
                     className="ni text-sm"
                     icon={faChalkboardTeacher}
                   />
                 </div>
-                <h4 class="text-gradient text-danger mb-0">
+                <h4 className="text-gradient text-primary mb-0">
                   Auticare Blueroom
                 </h4>
-                <h4 class="mb-4">Stand up for every move</h4>
+                <h4 className="mb-4">Stand up for every move</h4>
                 <p>
                   Society has put up so many boundaries, so many limitations on
                   what’s right and wrong that it’s almost impossible to get a
@@ -313,21 +326,23 @@ export default function Home() {
                   instantly become a gay two-year-old. Why would anyone pick
                   blue over pink? Pink is obviously a better color.
                 </p>
-                <a href="javascript:;" class="text-dark icon-move-right">
+                <a href="#" className="text-dark icon-move-right">
                   More about us
-                  <i class="fas fa-arrow-right text-sm ms-1"></i>
+                  <i className="fas fa-arrow-right text-sm ms-1"></i>
                 </a>
               </div>
             </div>
-            <div class="col-lg-6 col-md-8">
-              <div class="position-relative ms-md-5 d-none d-md-block d-lg-block d-xl-block h-75">
+            <div className="col-lg-6 col-md-8">
+              <div className="position-relative ms-md-5 d-none d-md-block d-lg-block d-xl-block h-75">
                 <div
-                  class="w-100 h-100 bg-gradient-danger border-radius-xl position-absolute"
+                  className="w-100 h-100 glassmorphic border-radius-xl position-absolute"
                   alt=""
                 ></div>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary top-left gc-sm"></span>
+                <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-right gc-bg"></span>
                 <img
                   src="/images/auticare-blueroom-content-cover.jpeg"
-                  class="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
+                  className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
                   alt=""
                 />
               </div>
@@ -338,7 +353,7 @@ export default function Home() {
       </section>
       {/* Auticare variants section */}
 
-      <section className="features-3 mt-n10 py-7">
+      {/* <section className="features-3 mt-n10 py-7">
         <div className="container">
           <div className="row text-center justify-content-center pt-10">
             <div className="col-lg-6">
@@ -463,8 +478,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         className="my-10 py-5 bg-gradient-dark position-relative"
         style={{
           backgroundImage:
@@ -503,246 +518,57 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <footer className="footer pt-5 mt-5">
-        <hr className="horizontal dark mb-5" />
+      </section> */}
+      
+      {/* Partner logo section */}
+      <div className="py-5">
         <div className="container">
           <div className="row">
-            <div className="col-md-3 mb-4 ms-auto">
-              <div>
-                <h6 className="text-gradient text-primary font-weight-bolder">
-                  Soft UI Design System
-                </h6>
-              </div>
-              <div>
-                <h6 className="mt-3 mb-2 opacity-8">Social</h6>
-                <ul className="d-flex flex-row ms-n3 nav">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link pe-1"
-                      href="https://www.facebook.com/CreativeTim/"
-                      target="_blank"
-                    >
-                      <i className="fab fa-facebook text-lg opacity-8"></i>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link pe-1"
-                      href="https://twitter.com/creativetim"
-                      target="_blank"
-                    >
-                      <i className="fab fa-twitter text-lg opacity-8"></i>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link pe-1"
-                      href="https://dribbble.com/creativetim"
-                      target="_blank"
-                    >
-                      <i className="fab fa-dribbble text-lg opacity-8"></i>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link pe-1"
-                      href="https://github.com/creativetimofficial"
-                      target="_blank"
-                    >
-                      <i className="fab fa-github text-lg opacity-8"></i>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link pe-1"
-                      href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w"
-                      target="_blank"
-                    >
-                      <i className="fab fa-youtube text-lg opacity-8"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div className="col-8 mx-auto text-center">
+              <h6 className="opacity-5"> More than 20+ trusted partners</h6>
             </div>
-            <div className="col-md-2 col-sm-6 col-6 mb-4">
-              <div>
-                <h6 className="text-gradient text-primary text-sm">Company</h6>
-                <ul className="flex-column ms-n3 nav">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/presentation"
-                      target="_blank"
-                    >
-                      About Us
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/templates/free"
-                      target="_blank"
-                    >
-                      Freebies
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/templates/premium"
-                      target="_blank"
-                    >
-                      Premium Tools
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/blog"
-                      target="_blank"
-                    >
-                      Blog
-                    </a>
-                  </li>
-                </ul>
-              </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-lg-2 col-md-4 col-6 mb-4">
+              <img
+                className="w-100 opacity-9"
+                src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/logos/gray-logos/logo-coinbase.svg"
+              />
             </div>
-            <div className="col-md-2 col-sm-6 col-6 mb-4">
-              <div>
-                <h6 className="text-gradient text-primary text-sm">
-                  Resources
-                </h6>
-                <ul className="flex-column ms-n3 nav">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://iradesign.io/"
-                      target="_blank"
-                    >
-                      Illustrations
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/bits"
-                      target="_blank"
-                    >
-                      Bits & Snippets
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/affiliates/new"
-                      target="_blank"
-                    >
-                      Affiliate Program
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div className="col-lg-2 col-md-4 col-6 mb-4">
+              <img
+                className="w-100 opacity-9"
+                src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/logos/gray-logos/logo-nasa.svg"
+              />
             </div>
-            <div className="col-md-2 col-sm-6 col-6 mb-4">
-              <div>
-                <h6 className="text-gradient text-primary text-sm">
-                  Help & Support
-                </h6>
-                <ul className="flex-column ms-n3 nav">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/contact-us"
-                      target="_blank"
-                    >
-                      Contact Us
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/knowledge-center"
-                      target="_blank"
-                    >
-                      Knowledge Center
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://services.creative-tim.com/?ref=ct-soft-ui-footer"
-                      target="_blank"
-                    >
-                      Custom Development
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/sponsorships"
-                      target="_blank"
-                    >
-                      Sponsorships
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div className="col-lg-2 col-md-4 col-6 mb-4">
+              <img
+                className="w-100 opacity-9"
+                src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/logos/gray-logos/logo-netflix.svg"
+              />
             </div>
-            <div className="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-              <div>
-                <h6 className="text-gradient text-primary text-sm">Legal</h6>
-                <ul className="flex-column ms-n3 nav">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/terms"
-                      target="_blank"
-                    >
-                      Terms & Conditions
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/privacy"
-                      target="_blank"
-                    >
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/license"
-                      target="_blank"
-                    >
-                      Licenses (EULA)
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div className="col-lg-2 col-md-4 col-6 mb-4">
+              <img
+                className="w-100 opacity-9"
+                src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/logos/gray-logos/logo-pinterest.svg"
+              />
             </div>
-            <div className="col-12">
-              <div className="text-center">
-                <p className="my-4 text-sm">
-                  &copy;
-                  <script>document.write(new Date().getFullYear());</script>
-                  Soft UI Design System by
-                  <a href="https://bit.ly/3fKQZaL" target="_blank">
-                    Creative Tim
-                  </a>
-                  - coded by
-                  <a href="https://appseed.us" target="_blank">
-                    AppSeed
-                  </a>
-                  .
-                </p>
-              </div>
+            <div className="col-lg-2 col-md-4 col-6 mb-4">
+              <img
+                className="w-100 opacity-9"
+                src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/logos/gray-logos/logo-spotify.svg"
+              />
+            </div>
+            <div className="col-lg-2 col-md-4 col-6 mb-4">
+              <img
+                className="w-100 opacity-9"
+                src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/logos/gray-logos/logo-vodafone.svg"
+              />
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+      {/* Partner logo section */}
     </>
   );
 }

@@ -13777,7 +13777,9 @@ label,
   position: relative;
   opacity: 1 !important;
 }
-
+.social {
+  width: 20px;
+}
 .icon-shape .ni {
   top: 12px;
 }
@@ -23262,7 +23264,44 @@ span.flatpickr-weekday {
   transform-style: preserve-3d;
   position: relative;
 }
-.vr-container {
-width: 800px;
-height: 600px;
+
+/* Custom  glassmorphic content */
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.glassmorphic-circle-helpers {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+.top-right {
+  top: -50px;
+  right: -50px;
+}
+.top-left {
+  top: -50px;
+  left: -50px;
+}
+.bottom-left {
+  bottom: -50px;
+  left: -50px;
+}
+.bottom-right {
+  bottom: -50px;
+  right: -50px;
+}
+.gc-sm {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.gc-bg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }

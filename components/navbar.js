@@ -1,4 +1,3 @@
-import "../styles/Navbar.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -37,17 +36,17 @@ export default function NavbarComponent() {
                     data-placement="bottom"
                   >
                     <Image
-                      src="/images/icon-dark.png"
+                      src="/images/Auticare Logo.png"
                       alt="Auticare Logo"
-                      width={30}
-                      height={30}
+                      width={50}
+                      height={50}
                     ></Image>
                   </a>
                 </Link>
                 <Link href="/contact">
                   <a
                     className="
-                  btn btn-sm
+                  btn btn-md
                   bg-gradient-primary
                   btn-round
                   mb-0
@@ -141,7 +140,7 @@ export default function NavbarComponent() {
                       </Link>
                     </li>
                     <li className="nav-item dropdown dropdown-hover mx-2">
-                      <Link href="/publication">
+                      <Link href="/publications">
                         <a
                           className="
                         nav-link
@@ -163,7 +162,7 @@ export default function NavbarComponent() {
                   <ul className="navbar-nav d-lg-block d-none">
                     <li className="nav-item">
                       <Link href="/contact">
-                        <a className="btn btn-sm bg-gradient-primary btn-round mb-0 me-1">
+                        <a className="btn btn-md bg-gradient-primary btn-round mb-0 me-1">
                           Contact US
                         </a>
                       </Link>
