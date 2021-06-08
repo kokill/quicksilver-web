@@ -340,6 +340,11 @@ svg {
   vertical-align: middle;
 }
 
+.svg-white {
+  color: #fff;
+  fill: #fff;
+}
+
 table {
   caption-side: bottom;
   border-collapse: collapse;
@@ -13782,6 +13787,9 @@ label,
 }
 .icon-shape .ni {
   top: 12px;
+}
+.icon-lf {
+  margin-left: 40%;
 }
 
 .icon-xs {

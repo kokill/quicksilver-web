@@ -36,7 +36,7 @@ export default function Error500() {
             </div>
             <div className="col-lg-7 my-auto">
               <Image
-                src="/images/error/error-500.png"
+                src="/images/error/error-500.webp"
                 alt="Error 500"
                 className="w-100 fadeIn1 fadeInBottom"
                 width={792}

@@ -1,62 +1,135 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+
 export default function Contact() {
   return (
     <>
+      {/* Contac header section */}
       <header>
-        <div className="page-header section-height-85">
-          <div className="oblique position-absolute top-0 h-100 d-md-block d-none">
-            <div
+        <div className="page-header section-height-100">
+          <div>
+            <img
               className="
-              oblique-image
-              bg-cover
               position-absolute
               fixed-top
               ms-auto
+              w-50
               h-100
               z-index-0
-              ms-n6
+              d-none d-sm-none d-md-block
+              border-radius-section
+              border-top-end-radius-0
+              border-top-start-radius-0
+              border-bottom-end-radius-0
             "
-              style={{
-                backgroundImage: "url(/images/home-hero-section-cover.jpg)",
-              }}
-            ></div>
+              src="/images/contact-header-cover.webp"
+            />
           </div>
           <div className="container">
             <div className="row">
-              <div
-                className="
-                col-lg-6 col-md-7
-                d-flex
-                justify-content-center
-                text-md-left text-center
-                flex-column
-              "
-              >
-                <h1 className="text-gradient text-primary">Contact</h1>
-                <h1 className="mb-4">Empowering Independence</h1>
-                <p className="lead pe-md-5 me-md-5">
-                  Auticare is an XR-AI based Assistive Technology learning
-                  platform for Autism Spectrum Disorder(ASD) and special
-                  education.
-                </p>
-                <div className="buttons">
-                  <button
-                    type="button"
-                    className="btn bg-gradient-primary mt-4"
-                  >
-                    Get Started
-                  </button>
-                  <button
-                    type="button"
-                    className="btn text-primary shadow-none mt-4"
-                  >
-                    Read more
-                  </button>
+              <div className="col-lg-7 d-flex justify-content-center flex-column">
+                <div
+                  className="
+                  card
+                  d-flex
+                  justify-content-center
+                  p-4
+                  shadow-lg
+                  my-sm-0 my-sm-6
+                  mt-8
+                  mb-5
+                "
+                >
+                  <div className="text-center">
+                    <h3 className="text-gradient text-primary">Contact us</h3>
+                    <p className="mb-0">
+                      For further questions, regarding Auticare and other
+                      services provided by us contact using our contact form
+                    </p>
+                  </div>
+                  <div className="card card-plain">
+                    <form
+                      role="form"
+                      id="contact-form"
+                      method="post"
+                      autocomplete="off"
+                    >
+                      <div className="card-body pb-2">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <label>Full Name</label>
+                            <div className="input-group mb-4">
+                              <input
+                                className="form-control"
+                                placeholder="Full Name"
+                                aria-label="Full Name"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md-6 ps-md-2">
+                            <label>Email</label>
+                            <div className="input-group mb-4">
+                              <input
+                                type="email"
+                                className="form-control"
+                                placeholder="auticare@embrightinfotech.com"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md-6 ps-md-2">
+                            <label>Phone Number</label>
+                            <div className="input-group mb-4">
+                              <input
+                                className="form-control"
+                                placeholder="Phone Number"
+                                aria-label="Phone Number"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md-6 ps-md-2">
+                            <label>Subject</label>
+                            <div className="input-group">
+                              <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Subject"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="form-group mb-0 mt-md-0 mt-4">
+                          <label>How can we help you?</label>
+                          <textarea
+                            name="message"
+                            className="form-control"
+                            id="message"
+                            rows="4"
+                            placeholder="Describe your requirements in a brief sentence"
+                          ></textarea>
+                        </div>
+                        <div className="row">
+                          <div className="col-md-12 text-center">
+                            <button
+                              type="submit"
+                              className="btn bg-gradient-primary mt-3 mb-0"
+                            >
+                              Send Message
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
+      {/* Contact header section */}
     </>
   );
 }

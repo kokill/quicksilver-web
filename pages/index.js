@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVrCardboard,
@@ -8,14 +7,13 @@ import {
   faCrown,
   faFeatherAlt,
   faChalkboardTeacher,
+  faLaugh,
+  faUserFriends,
+  faDonate,
+  faChartLine,
+  faAward,
 } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { faHive } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -35,7 +33,7 @@ export default function Home() {
               ms-n6
             "
               style={{
-                backgroundImage: "url(/images/home-hero-section-cover.jpg)",
+                backgroundImage: "url(/images/home-hero-section-cover.webp)",
               }}
             ></div>
           </div>
@@ -187,7 +185,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-right gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-left gc-bg"></span>
                 <img
-                  src="/images/autilite-content-cover.jpeg"
+                  src="/images/autilite-content-cover.webp"
                   alt="Autilite home based therapy"
                   className="w-100 border-radius-xl mt-6 ms-5 position-absolute interactive"
                 />
@@ -252,7 +250,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-left gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-right gc-bg"></span>
                 <img
-                  src="/images/auticare-standard-content-cover.jpeg"
+                  src="/images/auticare-standard-content-cover.webp"
                   className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
                   alt=""
                 />
@@ -271,7 +269,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-right gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-left gc-bg"></span>
                 <img
-                  src="/images/auticare-premium-content-cover.jpeg"
+                  src="/images/auticare-premium-content-cover.webp"
                   className="w-100 border-radius-xl mt-6 ms-5 position-absolute"
                   alt=""
                 />
@@ -341,7 +339,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-left gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-right gc-bg"></span>
                 <img
-                  src="/images/auticare-blueroom-content-cover.jpeg"
+                  src="/images/auticare-blueroom-content-cover.webp"
                   className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
                   alt=""
                 />
@@ -352,6 +350,110 @@ export default function Home() {
         </div>
       </section>
       {/* Auticare variants section */}
+
+      {/* Why Auticare section */}
+      <section className="py-6">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 mx-auto text-center pb-4">
+              <h4 className="text-gradient text-primary">Why</h4>
+              <h2>Auticare ?</h2>
+              <p className="lead">
+                What are the factors that keep us one step ahead of our
+                competitors ?
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
+                  <FontAwesomeIcon className="fa fas text-sm" icon={faLaugh} />
+                </div>
+                <h5 className="mt-4">Safe & Fun</h5>
+                <p>
+                  Doctors guided modules ensures a safe and fun environment for
+                  special children
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
+                  <FontAwesomeIcon
+                    className="fa fas text-sm"
+                    icon={faUserFriends}
+                  />
+                </div>
+                <h5 className="mt-4">Parental Involvement</h5>
+                <p>
+                  Home based therapy helps kids to enjoy the learning with
+                  support of their parents
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mx-md-auto">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
+                  <FontAwesomeIcon className="fa fas text-sm" icon={faDonate} />
+                </div>
+                <h5 className="mt-4">Affordable & Immersive</h5>
+                <p>
+                  Your special one now can experience an affordable interactive
+                  3D virtual scenarios that trains them in skills essential in
+                  daily life
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
+                  <FontAwesomeIcon
+                    className="fa fas text-sm"
+                    icon={faChartLine}
+                  />
+                </div>
+                <h5 className="mt-4">
+                  Enhanced Diagnosis & Therapy Productivity
+                </h5>
+                <p>
+                  Doctors and therapists can now get faster response feedback
+                  and compare progress levels of children's performance in each
+                  session
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
+                  <FontAwesomeIcon className="fa fas text-sm" icon={faAward} />
+                </div>
+                <h5 className="mt-4">
+                  Replayable VR scenarios and level based assessment
+                </h5>
+                <p>
+                  Allows the user to master skills and record the performance
+                  based progress in each levels
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mx-md-auto">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
+                  <FontAwesomeIcon className="fa fas text-sm" icon={faHive} />
+                </div>
+                <h5 className="mt-4">Customizable contents</h5>
+                <p>
+                  Provides VR scenarios according to the individual requirements
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Why Auticare section */}
 
       {/* <section className="features-3 mt-n10 py-7">
         <div className="container">
@@ -519,7 +621,7 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      
+
       {/* Partner logo section */}
       <div className="py-5">
         <div className="container">

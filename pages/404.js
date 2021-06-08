@@ -23,11 +23,11 @@ export default function Error404() {
             </div>
             <div className="col-lg-6 my-auto position-relative">
               <Image
-                src="/images/error/error-404.png"
+                src="/images/error/error-404.webp"
                 alt="Error 404"
                 className="w-100 fadeIn1 fadeInBottom"
-                width={1914}
-                height={1435}
+                width={800}
+                height={600}
                 layout="responsive"
               />
             </div>

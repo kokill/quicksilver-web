@@ -36,8 +36,9 @@ export default function NavbarComponent() {
                     data-placement="bottom"
                   >
                     <Image
-                      src="/images/Auticare Logo.png"
+                      src="/images/Auticare Logo.webp"
                       alt="Auticare Logo"
+                      priority="true"
                       width={50}
                       height={50}
                     ></Image>
