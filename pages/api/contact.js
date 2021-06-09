@@ -1,15 +1,7 @@
-export default function (req, res) {
-  let nodemailer = require("nodemailer");
+export default async function (req, res) {
+  const sgMail = require("@sendgrid/mail");
 
-  const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
-    auth: {
-      user: process.env.SMTP_MAIL_USER,
-      pass: process.env.SMTP_MAIL_PASS,
-    },
-    secure: true,
-  });
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const mailTemplate = `
       <!doctype html>
@@ -187,17 +179,14 @@ export default function (req, res) {
   </html>`;
 
   const mailData = {
-    from: process.env.SMTP_MAIL_USER,
+    from: "hadronbot@gmail.com",
     to: "souravraveendran6@gmail.com",
     subject: `Auticare enquiry from ${req.body.fullName}`,
     text: req.body.subject + " | Sent from: " + req.body.fullName,
     html: mailTemplate,
   };
 
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
-  });
-
-  res.status(200);
+  console.log("mail sent");
+  await sgMail.send(mailData);
+  res.status(200).json({ status: "OK" });
 }
