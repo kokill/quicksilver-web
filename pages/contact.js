@@ -2,7 +2,47 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+
 export default function Contact() {
+  const { register, handleSubmit } = useForm({
+    mode: "onSubmit",
+    reValidateMode: "onChange",
+    resolver: undefined,
+    context: undefined,
+    criteriaMode: "firstError",
+    shouldFocusError: true,
+    shouldUnregister: false,
+  });
+  const [errorMessages, setErrorMessages] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const onSubmit = (data) => {
+    console.log("Sending");
+    // console.log(data);
+
+    fetch("api/contact", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log("response recieved");
+      if (res.status === 200) {
+        console.log("response succeeded");
+        setErrorMessages("");
+        setSubmitted(true);
+      }
+    });
+  };
+
+  const onErrors = (errors) => {
+    setErrorMessages(Object.entries(errors)[0][1].message);
+  };
+
   return (
     <>
       {/* Contac header section */}
@@ -48,12 +88,16 @@ export default function Contact() {
                       services provided by us contact using our contact form
                     </p>
                   </div>
+                  <span className="badge bg-gradient-danger mt-3">
+                    {errorMessages}
+                  </span>
+
                   <div className="card card-plain">
                     <form
                       role="form"
                       id="contact-form"
-                      method="post"
-                      autocomplete="off"
+                      autoComplete="off"
+                      onSubmit={handleSubmit(onSubmit, onErrors)}
                     >
                       <div className="card-body pb-2">
                         <div className="row">
@@ -64,7 +108,16 @@ export default function Contact() {
                                 className="form-control"
                                 placeholder="Full Name"
                                 aria-label="Full Name"
+                                // name="fullName"
                                 type="text"
+                                {...register("fullName", {
+                                  required: "Full Name field is required",
+                                  minLength: {
+                                    value: 3,
+                                    message:
+                                      "Name should be more than 3 character",
+                                  },
+                                })}
                               />
                             </div>
                           </div>
@@ -72,9 +125,23 @@ export default function Contact() {
                             <label>Email</label>
                             <div className="input-group mb-4">
                               <input
-                                type="email"
+                                type="text"
+                                name="email"
                                 className="form-control"
-                                placeholder="auticare@embrightinfotech.com"
+                                placeholder="Email"
+                                {...register("email", {
+                                  required: "Email is required",
+                                  pattern: {
+                                    value:
+                                      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                    message: "Please enter a valid Email",
+                                  },
+                                  minLength: {
+                                    value: 3,
+                                    message:
+                                      "Email should be more than 3 characters",
+                                  },
+                                })}
                               />
                             </div>
                           </div>
@@ -85,7 +152,16 @@ export default function Contact() {
                                 className="form-control"
                                 placeholder="Phone Number"
                                 aria-label="Phone Number"
-                                type="text"
+                                type="tel"
+                                name="phoneNumber"
+                                {...register("phoneNumber", {
+                                  required: "Phone number is required",
+                                  pattern: {
+                                    value: /^\d{10}$/i,
+                                    message:
+                                      "Please enter a valid Phone number",
+                                  },
+                                })}
                               />
                             </div>
                           </div>
@@ -96,6 +172,15 @@ export default function Contact() {
                                 type="text"
                                 className="form-control"
                                 placeholder="Subject"
+                                name="subject"
+                                {...register("subject", {
+                                  required: "Please provide a subject",
+                                  minLength: {
+                                    value: 3,
+                                    message:
+                                      "subject length should be more than 3 character",
+                                  },
+                                })}
                               />
                             </div>
                           </div>
@@ -108,6 +193,9 @@ export default function Contact() {
                             id="message"
                             rows="4"
                             placeholder="Describe your requirements in a brief sentence"
+                            {...register("message", {
+                              required: false,
+                            })}
                           ></textarea>
                         </div>
                         <div className="row">
