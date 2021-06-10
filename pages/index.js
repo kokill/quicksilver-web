@@ -12,10 +12,21 @@ import {
   faDonate,
   faChartLine,
   faAward,
+  faPlayCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHive } from "@fortawesome/free-brands-svg-icons";
+import React, { useEffect, useState } from "react";
+import { Entity, Scene } from "aframe-react";
+import Image from "next/image";
 
 export default function Home() {
+  const [appRendered, setAppRendered] = useState(false);
+  useEffect(() => {
+    if (typeof window != "undefined") {
+      require("aframe");
+      setAppRendered(true);
+    }
+  }, []);
   return (
     <>
       <header>
@@ -455,172 +466,60 @@ export default function Home() {
       </section>
       {/* Why Auticare section */}
 
-      {/* <section className="features-3 mt-n10 py-7">
-        <div className="container">
-          <div className="row text-center justify-content-center pt-10">
-            <div className="col-lg-6">
-              <span className="badge rounded-pill badge-primary mb-2">
-                VR-experience
-              </span>
-              <h2>Ready for Auticare Demo?</h2>
-              <p>
-                Use these cards to navigate to and experience different
-                scenarios of Auticare
-              </p>
-            </div>
-          </div>
-          <div className="row mt-5">
-            <div className="col-lg-4 mb-lg-0 mb-4">
-              <Link href="/scenarios/alphabet">
-                <a>
-                  <div className="card card-background move-on-hover mb-4">
-                    <div
-                      className="full-background"
-                      style={{
-                        backgroundImage:
-                          "url(https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2389&q=80)",
-                      }}
-                    ></div>
-                    <div className="card-body pt-12">
-                      <h4 className="text-white">Scenario</h4>
-                      <p>Alphabet teaching scenario</p>
-                    </div>
+      {/* Aframe section */}
+      <section class="py-4">
+        <div class="container py-5">
+          <div class="row align-items-center text-center">
+            <h4 className="text-gradient text-primary">
+              Ready for Auticare Demo ?
+            </h4>
+            <h2>Try it Out</h2>
+            <p className="lead mb-5">
+              For your best experience use a device which supports
+              <br />
+              VR capabilities to experience the demo
+            </p>
+            <div class="col-md-12">
+              <div class="card p-0 rounded-3">
+                <div class="blur-shadow-image">
+                  <div class="aframe-custom-btn">
+                    <img
+                      src="/images/scenes/aframe-cover-img.webp"
+                      alt="img-blur-shadow"
+                      class="img-fluid shadow rounded-3"
+                    />
+                    <a id="targetVRButton" className="aframe-btn-cursor">
+                      <FontAwesomeIcon
+                        className="aframe-btn"
+                        icon={faPlayCircle}
+                      />
+                    </a>
                   </div>
-                </a>
-              </Link>
-              <Link href="/scenarios/ball-picking">
-                <a>
-                  <div className="card card-background move-on-hover">
-                    <div
-                      className="full-background"
-                      style={{
-                        backgroundImage:
-                          "url(https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1398&q=80)",
-                      }}
-                    ></div>
-                    <div className="card-body pt-12">
-                      <h4 className="text-white">Scenario</h4>
-                      <p>Ball picking scenario for hand-eye coordination</p>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-lg-4 mb-lg-0 mb-4">
-              <Link href="/scenarios/find-me-my-spot">
-                <a>
-                  <div className="card card-background move-on-hover mb-4">
-                    <div
-                      className="full-background"
-                      style={{
-                        backgroundImage:
-                          "url(https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80)",
-                      }}
-                    ></div>
-                    <div className="card-body pt-12">
-                      <h4 className="text-white">Scenario</h4>
-                      <p>Find me my spot</p>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-              <Link href="/scenarios/fruit-picking">
-                <a>
-                  <div className="card card-background move-on-hover">
-                    <div
-                      className="full-background"
-                      style={{
-                        backgroundImage:
-                          "url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2126&q=80)",
-                      }}
-                    ></div>
-                    <div className="card-body pt-12">
-                      <h4 className="text-white">Scenario</h4>
-                      <p>Fruit picking scenario for hand-eye coordination</p>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-lg-4">
-              <Link href="/scenarios/greeting">
-                <a>
-                  <div className="card card-background move-on-hover mb-4">
-                    <div
-                      className="full-background"
-                      style={{
-                        backgroundImage:
-                          "url(https://images.unsplash.com/photo-1517701221265-7da25447217b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2106&q=80)",
-                      }}
-                    ></div>
-                    <div className="card-body pt-12">
-                      <h4 className="text-white">Scenario</h4>
-                      <p>Manners scenario Greeting others</p>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-              <Link href="/scenarios/strike-while-you-can">
-                <a>
-                  <div className="card card-background move-on-hover">
-                    <div
-                      className="full-background"
-                      style={{
-                        backgroundImage:
-                          "url(https://images.unsplash.com/photo-1593642532400-2682810df593?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80)",
-                      }}
-                    ></div>
-                    <div className="card-body pt-12">
-                      <h4 className="text-white">Aim Sense</h4>
-                      <p>Strike objects for hand-eye coordination</p>
-                    </div>
-                  </div>
-                </a>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* <section
-        className="my-10 py-5 bg-gradient-dark position-relative"
-        style={{
-          backgroundImage:
-            "url(https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/nastuh.jpg)",
-        }}
-      >
-        <span className="mask bg-gradient-dark opacity-8"></span>
-        <div className="container position-relative z-index-2">
-          <div className="row">
-            <div className="col-lg-5 col-md-8 m-auto text-left">
-              <h5 className="text-white mb-lg-0 mb-5">
-                For being a bright color. For standing out. But the time is now
-                to be okay to be the greatest you.
-              </h5>
-            </div>
-            <div className="col-lg-6 m-auto">
-              <div className="row">
-                <div className="col-sm-4 col-6 ps-sm-0 ms-auto">
-                  <button
-                    type="button"
-                    className="
-                    btn
-                    bg-gradient-warning
-                    mb-0
-                    ms-lg-3 ms-sm-2
-                    mb-sm-0 mb-2
-                    me-auto
-                    w-100
-                    d-block
-                  "
-                  >
-                    Start Now
-                  </button>
+                  {appRendered && (
+                    <Scene embedded vr-mode-ui="enterVRButton: #targetVRButton">
+                      <a-assets>
+                        <img
+                          id="city"
+                          crossorigin="anonymous"
+                          src={`/images/scenes/alphabet.png`}
+                        />
+                      </a-assets>
+                      <Entity
+                        primitive="a-sky"
+                        id="image-360"
+                        radius="100"
+                        src="#city"
+                      />
+                      <Entity primitive="a-camera" camera look-controls />
+                    </Scene>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+      {/* Aframe section */}
 
       {/* Partner logo section */}
       <div className="py-5">

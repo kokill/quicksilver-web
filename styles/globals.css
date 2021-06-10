@@ -13782,6 +13782,13 @@ label,
   position: relative;
   opacity: 1 !important;
 }
+.fag {
+  color: #a0a0a0;
+  width: 20px;
+  opacity: 0.8;
+  position: relative;
+  opacity: 1 !important;
+}
 .social {
   width: 20px;
 }
@@ -23312,4 +23319,21 @@ span.flatpickr-weekday {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+/* Custom aframe components */
+.aframe-custom-btn {
+  position: relative;
+}
+.aframe-btn {
+  color: #fff;
+  height: 5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.aframe-btn-cursor {
+  cursor: pointer;
 }

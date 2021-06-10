@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faHome,
+  faMap,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
 import { useForm } from "react-hook-form";
@@ -17,24 +22,27 @@ export default function Contact() {
   });
   const [errorMessages, setErrorMessages] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [mailSent, setMailSent] = useState(false);
+  const [mailSentError, setMailSentError] = useState(false);
 
   const onSubmit = (data) => {
-    console.log("Sending");
-    // console.log(data);
-
     fetch("api/contact", {
       method: "POST",
       headers: {
-        "Accept": "application/json, text/plain, */*",
+        Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log("response recieved");
       if (res.status === 200) {
-        console.log("response succeeded");
+        setMailSent(true);
+        setMailSentError(false);
         setErrorMessages("");
         setSubmitted(true);
+      } else {
+        setErrorMessages("");
+        setMailSent(false);
+        setMailSentError(true);
       }
     });
   };
@@ -88,9 +96,6 @@ export default function Contact() {
                       services provided by us contact using our contact form
                     </p>
                   </div>
-                  <span className="badge bg-gradient-danger mt-3">
-                    {errorMessages}
-                  </span>
 
                   <div className="card card-plain">
                     <form
@@ -100,6 +105,19 @@ export default function Contact() {
                       onSubmit={handleSubmit(onSubmit, onErrors)}
                     >
                       <div className="card-body pb-2">
+                        <span className="badge bg-gradient-danger mt-3">
+                          {errorMessages}
+                        </span>
+                        {mailSent && (
+                          <span className="badge bg-gradient-success mb-3">
+                            Email sent succesfully
+                          </span>
+                        )}
+                        {mailSentError && (
+                          <span className="badge bg-gradient-danger mb-3">
+                            Some unexpected error occured while sending mail
+                          </span>
+                        )}
                         <div className="row">
                           <div className="col-md-6">
                             <label>Full Name</label>
@@ -218,6 +236,75 @@ export default function Contact() {
         </div>
       </header>
       {/* Contact header section */}
+      <section class="py-7 bg-white position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-5 mb-5">
+              <div class="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+                <i class="ni ni-single-02"></i>
+                <FontAwesomeIcon className=" ni text-sm" icon={faHome} />
+              </div>
+              <h2>Visit Us</h2>
+              <p class="pe-5">Corporate office & R & D Office</p>
+              <div class="d-flex p-2">
+                <div>
+                  <FontAwesomeIcon className=" fag text-sm" icon={faMap} />
+                </div>
+                <div class="ps-3">
+                  <span>
+                    Nasscom COE IOT, KEONICS, #29/A(E), 27th Main,
+                    <br />
+                    7th Cross, Sector 1,HSR Layout, 560102
+                  </span>
+                </div>
+              </div>
+              <div class="d-flex p-2">
+                <div>
+                  <FontAwesomeIcon className=" fag text-sm" icon={faMap} />
+                </div>
+                <div class="ps-3">
+                  <span>
+                    Kerala Startup Mission - Accelerator for Electronics
+                    <br />
+                    Technologies (ACE)CDAC Building, Technopark,
+                    <br />
+                    Kazhakkoottam, Thiruvananthapuram
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-5">
+              <div class="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+                <FontAwesomeIcon className=" ni text-sm" icon={faPhone} />
+              </div>
+              <h2>Get in Touch</h2>
+              <p class="pe-5">
+                Need other ways to get in touch with us? Please make use of the
+                phone numbers and official Auticare mail provided
+              </p>
+              <div class="d-flex p-2">
+                <div>
+                  <FontAwesomeIcon className=" fag text-sm" icon={faPhone} />
+                </div>
+                <div class="ps-3">
+                  <span>
+                    (+91) 8792975982
+                    <br /> (+91) 9895496049
+                  </span>
+                </div>
+              </div>
+              <div class="d-flex p-2">
+                <div>
+                  <FontAwesomeIcon className=" fag text-sm" icon={faEnvelope} />
+                </div>
+                <div class="ps-3">
+                  <span>auticare@embrightinfotech.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
