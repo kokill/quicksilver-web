@@ -9,7 +9,7 @@ export default function NavbarComponent() {
   };
   return (
     <>
-    {/* Navbar blur light */}
+      {/* Navbar blur light */}
       <div className="container position-sticky z-index-sticky top-0">
         <div className="row">
           <div className="col-12">
@@ -54,6 +54,7 @@ export default function NavbarComponent() {
                   ms-auto
                   d-lg-none d-block
                 "
+                    onClick={() => setCollapsed(false)}
                   >
                     Contact Us
                   </a>
@@ -97,6 +98,7 @@ export default function NavbarComponent() {
                           id="dropdownMenuPages"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          onClick={() => setCollapsed(false)}
                         >
                           Home
                         </a>
@@ -116,6 +118,7 @@ export default function NavbarComponent() {
                           id="dropdownMenuAccount"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          onClick={() => setCollapsed(false)}
                         >
                           Consultation
                         </a>
@@ -135,6 +138,7 @@ export default function NavbarComponent() {
                           id="dropdownMenuBlocks"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          onClick={() => setCollapsed(false)}
                         >
                           Coaching
                         </a>
@@ -154,6 +158,7 @@ export default function NavbarComponent() {
                           id="dropdownMenuDocs"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          onClick={() => setCollapsed(false)}
                         >
                           Publications
                         </a>

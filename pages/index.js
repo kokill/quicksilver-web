@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <div className="page-header section-height-85">
+        <div className="page-header section-height-100">
           <div className="oblique position-absolute top-0 h-100 d-md-block d-none">
             <div
               className="
@@ -467,9 +467,9 @@ export default function Home() {
       {/* Why Auticare section */}
 
       {/* Aframe section */}
-      <section class="py-4">
-        <div class="container py-5">
-          <div class="row align-items-center text-center">
+      <section className="py-4">
+        <div className="container py-5">
+          <div className="row align-items-center text-center">
             <h4 className="text-gradient text-primary">
               Ready for Auticare Demo ?
             </h4>
@@ -479,14 +479,14 @@ export default function Home() {
               <br />
               VR capabilities to experience the demo
             </p>
-            <div class="col-md-12">
-              <div class="card p-0 rounded-3">
-                <div class="blur-shadow-image">
-                  <div class="aframe-custom-btn">
+            <div className="col-md-12">
+              <div className="card p-0 rounded-3">
+                <div className="blur-shadow-image">
+                  <div className="aframe-custom-btn">
                     <img
                       src="/images/scenes/aframe-cover-img.webp"
                       alt="img-blur-shadow"
-                      class="img-fluid shadow rounded-3"
+                      className="img-fluid shadow rounded-3"
                     />
                     <a id="targetVRButton" className="aframe-btn-cursor">
                       <FontAwesomeIcon

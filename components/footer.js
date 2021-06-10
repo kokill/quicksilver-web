@@ -1,16 +1,17 @@
-import Link from 'next/link'
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faFacebook,
-    faInstagram,
-    faTwitter,
-    faYoutube,
-  } from "@fortawesome/free-brands-svg-icons";
+  faFacebook,
+  faInstagramSquare,
+  faLinkedinIn,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function FooterComponent() {
-    return (
-        <>
-        {/* Footer section */}
+  return (
+    <>
+      {/* Footer section */}
       <footer className="footer pt-5 mt-5">
         <hr className="horizontal dark mb-5" />
         <div className="container">
@@ -18,7 +19,7 @@ export default function FooterComponent() {
             <div className="col-md-3 mb-4 ms-auto">
               <div>
                 <h6 className="text-gradient text-primary font-weight-bolder">
-                  Soft UI Design System
+                  Auticare Assistive Technology Platform
                 </h6>
               </div>
               <div>
@@ -27,7 +28,7 @@ export default function FooterComponent() {
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://www.facebook.com/CreativeTim/"
+                      href="https://www.facebook.com/MyAuticare"
                       target="_blank"
                     >
                       <FontAwesomeIcon
@@ -39,7 +40,7 @@ export default function FooterComponent() {
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://twitter.com/creativetim"
+                      href="https://twitter.com/embrightinfotec"
                       target="_blank"
                     >
                       <FontAwesomeIcon
@@ -51,7 +52,7 @@ export default function FooterComponent() {
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w"
+                      href="https://www.youtube.com/channel/UCarMIgou5Ia5hlgyij69nCQ/videos"
                       target="_blank"
                     >
                       <FontAwesomeIcon
@@ -63,12 +64,24 @@ export default function FooterComponent() {
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w"
+                      href="https://www.instagram.com/my_auticare/"
                       target="_blank"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
-                        icon={faInstagram}
+                        icon={faInstagramSquare}
+                      />
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      className="nav-link pe-1"
+                      href="https://www.linkedin.com/mwlite/company/embrightinfotech"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon
+                        className="social text-lg opacity-8"
+                        icon={faLinkedinIn}
                       />
                     </a>
                   </li>
@@ -96,11 +109,7 @@ export default function FooterComponent() {
                   </li>
                   <li className="nav-item">
                     <Link href="/publications">
-                      <a
-                        className="nav-link"
-                      >
-                        Publications
-                      </a>
+                      <a className="nav-link">Publications</a>
                     </Link>
                   </li>
                 </ul>
@@ -149,13 +158,9 @@ export default function FooterComponent() {
                 </h6>
                 <ul className="flex-column ms-n3 nav">
                   <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/contact-us"
-                      target="_blank"
-                    >
-                      Contact Us
-                    </a>
+                    <Link href="/contact">
+                      <a className="nav-link">Contact Us</a>
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <a
@@ -225,7 +230,7 @@ export default function FooterComponent() {
               <div className="text-center">
                 <p className="my-4 text-sm">
                   &copy; Auticare assistive technology platform by
-                  <a href="https://bit.ly/3fKQZaL" target="_blank">
+                  <a href="https://embrightinfotech.com/" target="_blank">
                     &#160;Embright Infotech.
                   </a>
                 </p>
@@ -235,6 +240,6 @@ export default function FooterComponent() {
         </div>
       </footer>
       {/* Footer section */}
-      </>
-    )
+    </>
+  );
 }

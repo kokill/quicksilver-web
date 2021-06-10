@@ -13789,6 +13789,10 @@ label,
   position: relative;
   opacity: 1 !important;
 }
+.arrow-right {
+  color: #ff0080;
+  width: 20px;
+}
 .social {
   width: 20px;
 }

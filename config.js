@@ -11,7 +11,7 @@ export const SEO = {
         "auticare, autism, xr, ai, asd, vr, autilite, autism spectrum disorder",
       description:
         "Auticare is an XR-AI based Assistive Technology learning platform for Autism Spectrum Disorder(ASD) and special education.",
-      image: "/images/seo-home-page.webp",
+      image: "https://imgur.com/a/WR0m6ry",
     },
   },
 };
