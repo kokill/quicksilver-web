@@ -44,7 +44,7 @@ export default function Home() {
               ms-n6
             "
               style={{
-                backgroundImage: "url(/images/home-hero-section-cover.webp)",
+                backgroundImage: "url(/images/home/home-hero-section-cover.webp)",
               }}
             ></div>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-right gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-left gc-bg"></span>
                 <img
-                  src="/images/autilite-content-cover.webp"
+                  src="/images/home/autilite-content-cover.webp"
                   alt="Autilite home based therapy"
                   className="w-100 border-radius-xl mt-6 ms-5 position-absolute interactive"
                 />
@@ -261,7 +261,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-left gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-right gc-bg"></span>
                 <img
-                  src="/images/auticare-standard-content-cover.webp"
+                  src="/images/home/auticare-standard-content-cover.webp"
                   className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
                   alt=""
                 />
@@ -280,7 +280,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-right gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-left gc-bg"></span>
                 <img
-                  src="/images/auticare-premium-content-cover.webp"
+                  src="/images/home/auticare-premium-content-cover.webp"
                   className="w-100 border-radius-xl mt-6 ms-5 position-absolute"
                   alt=""
                 />
@@ -350,7 +350,7 @@ export default function Home() {
                 <span className="glassmorphic-circle-helpers bg-gradient-primary top-left gc-sm"></span>
                 <span className="glassmorphic-circle-helpers bg-gradient-primary bottom-right gc-bg"></span>
                 <img
-                  src="/images/auticare-blueroom-content-cover.webp"
+                  src="/images/home/auticare-blueroom-content-cover.webp"
                   className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
                   alt=""
                 />

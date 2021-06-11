@@ -71,7 +71,7 @@ export default function Contact() {
               border-top-start-radius-0
               border-bottom-end-radius-0
             "
-              src="/images/contact-header-cover.webp"
+              src="/images/contact/contact-header-cover.webp"
             />
           </div>
           <div className="container">

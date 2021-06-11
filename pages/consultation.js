@@ -26,43 +26,43 @@ export default function Consultation() {
                   <div className="col-lg-3 col-6">
                     <img
                       className="w-100 border-radius-lg shadow mt-0 mt-lg-7"
-                      src="/images/consultation-section-cover-1.jpeg"
+                      src="/images/consultation/consultation-section-cover-1.webp"
                       alt=""
                     />
                   </div>
                   <div className="col-lg-3 col-6">
                     <img
                       className="w-100 border-radius-lg shadow"
-                      src="images/consultation-section-cover-2.jpeg"
+                      src="images/consultation/consultation-section-cover-2.webp"
                       alt=""
                     />
                     <img
                       className="w-100 border-radius-lg shadow mt-4"
-                      src="/images/consultation-section-cover-3.jpeg"
+                      src="/images/consultation/consultation-section-cover-3.webp"
                       alt=""
                     />
                   </div>
                   <div className="col-lg-3 col-6">
                     <img
                       className="w-100 border-radius-lg shadow mt-0 mt-lg-5"
-                      src="/images/consultation-section-cover-4.jpeg"
+                      src="/images/consultation/consultation-section-cover-4.webp"
                       alt=""
                     />
                     <img
                       className="w-100 border-radius-lg shadow mt-4"
-                      src="/images/consultation-section-cover-5.jpeg"
+                      src="/images/consultation/consultation-section-cover-5.webp"
                       alt=""
                     />
                   </div>
                   <div className="col-lg-3 col-6">
                     <img
                       className="w-100 border-radius-lg shadow mt-3"
-                      src="/images/consultation-section-cover-6.jpeg"
+                      src="/images/consultation/consultation-section-cover-6.webp"
                       alt=""
                     />
                     <img
                       className="w-100 border-radius-lg shadow mt-4"
-                      src="/images/consultation-section-cover-7.jpeg"
+                      src="/images/consultation/consultation-section-cover-7.webp"
                       alt=""
                     />
                   </div>
@@ -83,7 +83,7 @@ export default function Consultation() {
                   <div className="card rounded-3">
                     <div className="d-block blur-shadow-image">
                       <img
-                        src="/images/consultation-content-section-1.jpeg"
+                        src="/images/consultation/consultation-content-section-1.webp"
                         alt="family in a therapist session"
                         className="img-fluid shadow rounded-3"
                       />
@@ -134,10 +134,14 @@ export default function Consultation() {
                     <div className="col-md-4">
                       <div className="card card-pricing bg-white border-0 text-center mb-4 shadow-xl">
                         <div className="card-header bg-transparent">
-                          <h6 className="text-uppercase ls-1 py-3 mb-0">Starter</h6>
+                          <h6 className="text-uppercase ls-1 py-3 mb-0">
+                            Starter
+                          </h6>
                         </div>
                         <div className="card-body text-dark">
-                          <p className="display-2 font-weight-bold mb-0">₹999</p>
+                          <p className="display-2 font-weight-bold mb-0">
+                            ₹999
+                          </p>
                           {/* <span>per month</span> */}
                           <ul className="list-unstyled my-4">
                             <li className="align-items-center">
@@ -174,7 +178,9 @@ export default function Consultation() {
                           </h6>
                         </div>
                         <div className="card-body text-dark">
-                          <p className="display-2 font-weight-bold mb-0">₹4999</p>
+                          <p className="display-2 font-weight-bold mb-0">
+                            ₹4999
+                          </p>
                           {/* <span>per month</span> */}
                           <ul className="list-unstyled my-4">
                             <li className="align-items-center">
@@ -216,7 +222,9 @@ export default function Consultation() {
                           </h6>
                         </div>
                         <div className="card-body text-white position-relative">
-                          <p className="display-2 font-weight-bold mb-0">₹9999</p>
+                          <p className="display-2 font-weight-bold mb-0">
+                            ₹9999
+                          </p>
                           {/* <span>per month</span> */}
                           <ul className="list-unstyled my-4">
                             <li className="align-items-center">
@@ -248,10 +256,14 @@ export default function Consultation() {
                     <div className="col-md-6">
                       <div className="card card-pricing bg-white border-0 text-center mb-4">
                         <div className="card-header bg-transparent">
-                          <h6 className="text-uppercase ls-1 py-3 mb-0">Gold</h6>
+                          <h6 className="text-uppercase ls-1 py-3 mb-0">
+                            Gold
+                          </h6>
                         </div>
                         <div className="card-body text-dark">
-                          <p className="display-2 font-weight-bold mb-0">$100</p>
+                          <p className="display-2 font-weight-bold mb-0">
+                            $100
+                          </p>
                           <span>per month</span>
                           <ul className="list-unstyled my-4">
                             <li className="align-items-center">
@@ -285,7 +297,9 @@ export default function Consultation() {
                           </h6>
                         </div>
                         <div className="card-body text-white position-relative">
-                          <p className="display-2 font-weight-bold mb-0">$135</p>
+                          <p className="display-2 font-weight-bold mb-0">
+                            $135
+                          </p>
                           <span>per month</span>
                           <ul className="list-unstyled my-4">
                             <li className="align-items-center">
@@ -323,7 +337,7 @@ export default function Consultation() {
                   <div className="card rounded-3">
                     <div className="blur-shadow-image">
                       <img
-                        src="/images/consultation-content-section-2.jpeg"
+                        src="/images/consultation/consultation-content-section-2.webp"
                         alt="online consultation through laptop"
                         className="img-fluid shadow rounded-3"
                       />
@@ -351,88 +365,96 @@ export default function Consultation() {
         </div>
         {/* Item */}
       </section>
+
       {/* Steps Section */}
-      <section>
-        <div className="container mt-3">
-          <div className="row pt-5">
-            <h2 className="text-dark mt-5 mb-5">How to get Started</h2>
-            <div className="col-md-3">
-              <div className="info align-items-center">
-                <div className="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+      <section className="py-6">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 mx-auto text-center pb-4">
+              <h2>How to get Started ?</h2>
+              <p className="lead">Follow these steps</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-3 col-md-3">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
                     icon={faMoneyCheckAlt}
                   />
                 </div>
-                <h6>
-                  Understand plan
-                  <br />& pricing
-                </h6>
-
-                <FontAwesomeIcon
-                  className="fa fas text-sm arrow-right"
-                  icon={faArrowRight}
-                />
+                <a>
+                  <h5 className="mt-4">
+                    Understand plan
+                    <br />& pricing
+                  </h5>
+                  <FontAwesomeIcon
+                    className="arrow-right"
+                    icon={faArrowRight}
+                  />
+                </a>
               </div>
             </div>
-            <div className="col-md-3">
-              <div className="info align-items-center">
-                <div className="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+            <div className="col-md-3 col-md-3">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
                     icon={faClipboard}
                   />
                 </div>
-                <h6>
-                  Book your
-                  <br />
-                  Consultation
-                </h6>
-
-                <FontAwesomeIcon
-                  className="fa fas text-sm arrow-right"
-                  icon={faArrowRight}
-                />
+                <a>
+                  <h5 className="mt-4">
+                    Book your
+                    <br />
+                    Consultation
+                  </h5>
+                  <FontAwesomeIcon
+                    className="arrow-right"
+                    icon={faArrowRight}
+                  />
+                </a>
               </div>
             </div>
-            <div className="col-md-3">
-              <div className="info align-items-center">
-                <div className="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+            <div className="col-md-3 col-md-3">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
                     icon={faCalendarCheck}
                   />
                 </div>
-                <h6>
-                  Schedule the
-                  <br />
-                  Session
-                </h6>
-
-                <FontAwesomeIcon
-                  className="fa fas text-sm arrow-right"
-                  icon={faArrowRight}
-                />
+                <a>
+                  <h5 className="mt-4">
+                    Schedule the
+                    <br />
+                    Session
+                  </h5>
+                  <FontAwesomeIcon
+                    className="arrow-right"
+                    icon={faArrowRight}
+                  />
+                </a>
               </div>
             </div>
-            <div className="col-md-3">
-              <div className="info align-items-center">
-                <div className="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+            <div className="col-md-3 col-md-3">
+              <div className="p-3 text-center">
+                <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
                     icon={faAddressCard}
                   />
                 </div>
-                <h6>
-                  Get your session with
-                  <br />
-                  required therapist
-                </h6>
-
-                <FontAwesomeIcon
-                  className="fa fas text-sm arrow-right"
-                  icon={faArrowRight}
-                />
+                <a>
+                  <h5 className="mt-4">
+                    Get your session with<br />required therapist
+                  </h5>
+                  <FontAwesomeIcon
+                    className="arrow-right"
+                    icon={faArrowRight}
+                  />
+                </a>
               </div>
             </div>
           </div>
