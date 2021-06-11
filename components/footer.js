@@ -126,6 +126,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://iradesign.io/"
                       target="_blank"
+                      rel="noopener"
                     >
                       Illustrations
                     </a>
@@ -135,6 +136,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://www.creative-tim.com/bits"
                       target="_blank"
+                      rel="noopener"
                     >
                       Bits & Snippets
                     </a>
@@ -144,6 +146,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://www.creative-tim.com/affiliates/new"
                       target="_blank"
+                      rel="noopener"
                     >
                       Affiliate Program
                     </a>
@@ -167,6 +170,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://www.creative-tim.com/knowledge-center"
                       target="_blank"
+                      rel="noopener"
                     >
                       Knowledge Center
                     </a>
@@ -176,6 +180,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://services.creative-tim.com/?ref=ct-soft-ui-footer"
                       target="_blank"
+                      rel="noopener"
                     >
                       Custom Development
                     </a>
@@ -185,6 +190,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://www.creative-tim.com/sponsorships"
                       target="_blank"
+                      rel="noopener"
                     >
                       Sponsorships
                     </a>
@@ -201,6 +207,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://www.creative-tim.com/terms"
                       target="_blank"
+                      rel="noopener"
                     >
                       Terms & Conditions
                     </a>
@@ -210,6 +217,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://www.creative-tim.com/privacy"
                       target="_blank"
+                      rel="noopener"
                     >
                       Privacy Policy
                     </a>
@@ -219,6 +227,7 @@ export default function FooterComponent() {
                       className="nav-link"
                       href="https://www.creative-tim.com/license"
                       target="_blank"
+                      rel="noopener"
                     >
                       Licenses (EULA)
                     </a>
@@ -230,7 +239,11 @@ export default function FooterComponent() {
               <div className="text-center">
                 <p className="my-4 text-sm">
                   &copy; Auticare assistive technology platform by
-                  <a href="https://embrightinfotech.com/" target="_blank">
+                  <a
+                    href="https://embrightinfotech.com/"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     &#160;Embright Infotech.
                   </a>
                 </p>

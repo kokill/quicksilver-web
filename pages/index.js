@@ -483,10 +483,13 @@ export default function Home() {
               <div className="card p-0 rounded-3">
                 <div className="blur-shadow-image">
                   <div className="aframe-custom-btn">
-                    <img
+                    <Image
                       src="/images/scenes/aframe-cover-img.webp"
                       alt="img-blur-shadow"
                       className="img-fluid shadow rounded-3"
+                      width={1280}
+                      height={720}
+                      layout="responsive"
                     />
                     <a id="targetVRButton" className="aframe-btn-cursor">
                       <FontAwesomeIcon
@@ -500,7 +503,7 @@ export default function Home() {
                       <a-assets>
                         <img
                           id="city"
-                          crossorigin="anonymous"
+                          crossOrigin="anonymous"
                           src={`/images/scenes/alphabet.png`}
                         />
                       </a-assets>

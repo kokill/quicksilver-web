@@ -6,6 +6,7 @@ import {
   faMoneyCheckAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 export default function Consultation() {
   return (
@@ -27,43 +28,43 @@ export default function Consultation() {
                     <img
                       className="w-100 border-radius-lg shadow mt-0 mt-lg-7"
                       src="/images/consultation/consultation-section-cover-1.webp"
-                      alt=""
+                      alt="consultation cover image"
                     />
                   </div>
                   <div className="col-lg-3 col-6">
                     <img
                       className="w-100 border-radius-lg shadow"
                       src="images/consultation/consultation-section-cover-2.webp"
-                      alt=""
+                      alt="consultation cover image"
                     />
                     <img
                       className="w-100 border-radius-lg shadow mt-4"
                       src="/images/consultation/consultation-section-cover-3.webp"
-                      alt=""
+                      alt="consultation cover image"
                     />
                   </div>
                   <div className="col-lg-3 col-6">
                     <img
                       className="w-100 border-radius-lg shadow mt-0 mt-lg-5"
                       src="/images/consultation/consultation-section-cover-4.webp"
-                      alt=""
+                      alt="consultation cover image"
                     />
                     <img
                       className="w-100 border-radius-lg shadow mt-4"
                       src="/images/consultation/consultation-section-cover-5.webp"
-                      alt=""
+                      alt="consultation cover image"
                     />
                   </div>
                   <div className="col-lg-3 col-6">
                     <img
                       className="w-100 border-radius-lg shadow mt-3"
                       src="/images/consultation/consultation-section-cover-6.webp"
-                      alt=""
+                      alt="consultation cover image"
                     />
                     <img
                       className="w-100 border-radius-lg shadow mt-4"
                       src="/images/consultation/consultation-section-cover-7.webp"
-                      alt=""
+                      alt="consultation cover image"
                     />
                   </div>
                 </div>
@@ -82,10 +83,13 @@ export default function Consultation() {
                 <div className="col-lg-6 justify-content-center d-flex flex-column">
                   <div className="card rounded-3">
                     <div className="d-block blur-shadow-image">
-                      <img
+                      <Image
                         src="/images/consultation/consultation-content-section-1.webp"
                         alt="family in a therapist session"
                         className="img-fluid shadow rounded-3"
+                        width={1592}
+                        height={946}
+                        layout="responsive"
                       />
                     </div>
                   </div>
@@ -212,7 +216,7 @@ export default function Consultation() {
                     <div className="col-md-4">
                       <div className="card card-pricing bg-gradient-primary border-0 text-center mb-4 overflow-hidden shadow-xl">
                         <img
-                          src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/shapes/waves-white.svg"
+                          src="/images/common/waves-white.svg"
                           alt="pattern-lines"
                           className="position-absolute opacity-8"
                         />
@@ -251,77 +255,6 @@ export default function Consultation() {
                     {/* Item */}
                   </div>
                 </div>
-                <div className="tab-pane" id="commercial">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="card card-pricing bg-white border-0 text-center mb-4">
-                        <div className="card-header bg-transparent">
-                          <h6 className="text-uppercase ls-1 py-3 mb-0">
-                            Gold
-                          </h6>
-                        </div>
-                        <div className="card-body text-dark">
-                          <p className="display-2 font-weight-bold mb-0">
-                            $100
-                          </p>
-                          <span>per month</span>
-                          <ul className="list-unstyled my-4">
-                            <li className="align-items-center">
-                              <b>200GB</b> <span>File Storage</span>
-                            </li>
-                            <li className="align-items-center my-2">
-                              <b>Unlimited</b> <span>Users</span>
-                            </li>
-                            <li className="align-items-center">
-                              <b>Premium</b> <span>Support</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="card-footer bg-transparent">
-                          <button className="btn btn-outline-primary">
-                            Request a demo
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="card card-pricing bg-gradient-primary border-0 text-center mb-4 overflow-hidden">
-                        <img
-                          src="https://appsrv1-147a1.kxcdn.com/soft-ui-pro/img/shapes/waves-white.svg"
-                          alt="pattern-lines"
-                          className="position-absolute opacity-8"
-                        />
-                        <div className="card-header bg-transparent">
-                          <h6 className="text-uppercase text-white ls-1 py-3 mb-0">
-                            Platinum
-                          </h6>
-                        </div>
-                        <div className="card-body text-white position-relative">
-                          <p className="display-2 font-weight-bold mb-0">
-                            $135
-                          </p>
-                          <span>per month</span>
-                          <ul className="list-unstyled my-4">
-                            <li className="align-items-center">
-                              <b>500GB</b> <span>File Storage</span>
-                            </li>
-                            <li className="align-items-center my-2">
-                              <b>Unlimited</b> <span>Users</span>
-                            </li>
-                            <li className="align-items-center">
-                              <b>No time</b> <span>Tracking</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="card-footer bg-transparent position-relative">
-                          <button className="btn btn-outline-white">
-                            Request a demo
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -336,10 +269,13 @@ export default function Consultation() {
                 <div className="col-lg-6 justify-content-center d-flex flex-column">
                   <div className="card rounded-3">
                     <div className="blur-shadow-image">
-                      <img
+                      <Image
                         src="/images/consultation/consultation-content-section-2.webp"
                         alt="online consultation through laptop"
                         className="img-fluid shadow rounded-3"
+                        width={1200}
+                        height={800}
+                        layout="responsive"
                       />
                     </div>
                   </div>
@@ -448,7 +384,9 @@ export default function Consultation() {
                 </div>
                 <a>
                   <h5 className="mt-4">
-                    Get your session with<br />required therapist
+                    Get your session with
+                    <br />
+                    required therapist
                   </h5>
                   <FontAwesomeIcon
                     className="arrow-right"

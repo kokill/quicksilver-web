@@ -13770,6 +13770,12 @@ label,
   background-position: center;
   border-radius: 0.75rem;
 }
+.icon-shape-sm {
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  border-radius: 0.75rem;
+}
 
 .icon-shape .icon-move-right:focus,
 .icon-shape .ni,

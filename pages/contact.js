@@ -5,13 +5,12 @@ import {
   faMap,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 export default function Contact() {
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, reset } = useForm({
     mode: "onSubmit",
     reValidateMode: "onChange",
     resolver: undefined,
@@ -24,6 +23,16 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [mailSent, setMailSent] = useState(false);
   const [mailSentError, setMailSentError] = useState(false);
+
+  const resetFields = () => {
+    reset({
+      fullName: "",
+      email: "",
+      phoneNumber: "",
+      subject: "",
+      message: "",
+    });
+  };
 
   const onSubmit = (data) => {
     fetch("api/contact", {
@@ -39,6 +48,7 @@ export default function Contact() {
         setMailSentError(false);
         setErrorMessages("");
         setSubmitted(true);
+        resetFields();
       } else {
         setErrorMessages("");
         setMailSent(false);
