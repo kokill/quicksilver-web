@@ -13788,6 +13788,18 @@ label,
   position: relative;
   opacity: 1 !important;
 }
+.fa-2x {
+  width: 28px;
+  height: 28px;
+}
+.fa-3x {
+  width: 42px;
+  height: 42px;
+}
+.fa-4x {
+  width: 56px;
+  height: 56px;
+}
 .fag {
   color: #a0a0a0;
   width: 20px;
@@ -13798,6 +13810,9 @@ label,
 .arrow-right {
   color: #ff0080;
   width: 20px;
+}
+.arrow-right-sm {
+  width: 10px;
 }
 .social {
   width: 20px;

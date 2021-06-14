@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Meta from "./meta";
-import { SEO } from "../config";
 
 export default function HeaderComponent() {
   return (

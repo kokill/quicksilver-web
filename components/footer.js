@@ -30,6 +30,7 @@ export default function FooterComponent() {
                       className="nav-link pe-1"
                       href="https://www.facebook.com/MyAuticare"
                       target="_blank"
+                      rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
@@ -42,6 +43,7 @@ export default function FooterComponent() {
                       className="nav-link pe-1"
                       href="https://twitter.com/embrightinfotec"
                       target="_blank"
+                      rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
@@ -54,6 +56,7 @@ export default function FooterComponent() {
                       className="nav-link pe-1"
                       href="https://www.youtube.com/channel/UCarMIgou5Ia5hlgyij69nCQ/videos"
                       target="_blank"
+                      rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
@@ -66,6 +69,7 @@ export default function FooterComponent() {
                       className="nav-link pe-1"
                       href="https://www.instagram.com/my_auticare/"
                       target="_blank"
+                      rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
@@ -78,6 +82,7 @@ export default function FooterComponent() {
                       className="nav-link pe-1"
                       href="https://www.linkedin.com/mwlite/company/embrightinfotech"
                       target="_blank"
+                      rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
@@ -108,8 +113,8 @@ export default function FooterComponent() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link href="/publications">
-                      <a className="nav-link">Publications</a>
+                    <Link href="/blogs">
+                      <a className="nav-link">Blogs</a>
                     </Link>
                   </li>
                 </ul>

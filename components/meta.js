@@ -1,9 +1,8 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { SEO } from "../config";
+import { SEO } from "../utils/config";
 
 export default function Meta() {
-
   return (
     <Head>
       <meta

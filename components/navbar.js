@@ -145,7 +145,7 @@ export default function NavbarComponent() {
                       </Link>
                     </li>
                     <li className="nav-item dropdown dropdown-hover mx-2">
-                      <Link href="/publications">
+                      <Link href="/blogs">
                         <a
                           className="
                         nav-link
@@ -160,7 +160,7 @@ export default function NavbarComponent() {
                           aria-expanded="false"
                           onClick={() => setCollapsed(false)}
                         >
-                          Publications
+                          Blogs
                         </a>
                       </Link>
                     </li>
