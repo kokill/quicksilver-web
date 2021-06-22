@@ -1,14 +1,8 @@
-import { STRAPI_URL } from "../../utils/next.config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedinIn,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { FONTAWESOMEICON } from "../../utils/fontawesome-icons";
 import Image from "next/image";
 import Link from "next/link";
+import { SOCIAL_LINKS } from "../../utils/social-links";
 
 export default function Blogs({ blogList }) {
   return (
@@ -37,53 +31,45 @@ export default function Blogs({ blogList }) {
 
                 <div className="d-flex justify-content-center">
                   <a
-                    href="https://www.facebook.com/MyAuticare"
+                    href={SOCIAL_LINKS.facebook}
                     target="_blank"
                     rel="noopener"
                   >
                     <FontAwesomeIcon
                       className="fab fa-2x text-white me-5"
-                      icon={faFacebook}
+                      icon={FONTAWESOMEICON.iconFacebook}
                     />
                   </a>
                   <a
-                    href="https://www.instagram.com/my_auticare/"
+                    href={SOCIAL_LINKS.instagram}
                     target="_blank"
                     rel="noopener"
                   >
                     <FontAwesomeIcon
                       className="fab fa-2x text-white me-5"
-                      icon={faInstagram}
+                      icon={FONTAWESOMEICON.iconInstagram}
+                    />
+                  </a>
+                  <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener">
+                    <FontAwesomeIcon
+                      className="fab fa-2x text-white me-5"
+                      icon={FONTAWESOMEICON.iconTwitter}
+                    />
+                  </a>
+                  <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener">
+                    <FontAwesomeIcon
+                      className="fab fa-2x text-white me-5"
+                      icon={FONTAWESOMEICON.iconYoutube}
                     />
                   </a>
                   <a
-                    href="https://twitter.com/embrightinfotec"
+                    href={SOCIAL_LINKS.linkedin}
                     target="_blank"
                     rel="noopener"
                   >
                     <FontAwesomeIcon
                       className="fab fa-2x text-white me-5"
-                      icon={faTwitter}
-                    />
-                  </a>
-                  <a
-                    href="https://www.youtube.com/channel/UCarMIgou5Ia5hlgyij69nCQ/videos"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FontAwesomeIcon
-                      className="fab fa-2x text-white me-5"
-                      icon={faYoutube}
-                    />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/mwlite/company/embrightinfotech"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FontAwesomeIcon
-                      className="fab fa-2x text-white me-5"
-                      icon={faLinkedinIn}
+                      icon={FONTAWESOMEICON.iconLinkedin}
                     />
                   </a>
                 </div>
@@ -124,15 +110,15 @@ export default function Blogs({ blogList }) {
       {/* Header section */}
 
       {/* Blog list section */}
-      <section class="py-6 bg-gray-100">
-        <div class="container">
-          <div class="row">
+      <section className="py-6 bg-gray-100">
+        <div className="container">
+          <div className="row">
             {blogList.map((item) => (
-              <div class="col-lg-4 mb-lg-0 mb-4 mt-3" key={item.id}>
-                <div class="card">
-                  <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+              <div className="col-lg-4 mb-lg-0 mb-4 mt-3" key={item.id}>
+                <div className="card">
+                  <div className="card-header p-0 mx-3 mt-3 position-relative z-index-1">
                     <Link href={`/blogs/${String(item.id)}`}>
-                      <a class="d-block">
+                      <a className="d-block">
                         <Image
                           className="img-fluid border-radius-lg"
                           src={item.CoverImage.url}
@@ -144,21 +130,20 @@ export default function Blogs({ blogList }) {
                     </Link>
                   </div>
 
-                  <div class="card-body pt-3">
-                    <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">
+                  <div className="card-body pt-3">
+                    <span className="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">
                       Blog
                     </span>
                     <Link href={`/blogs/${item.id}`}>
-                      <a class="card-title h5 d-block text-darker">
+                      <a className="card-title h5 d-block text-darker">
                         {item.Title}
                       </a>
                     </Link>
-                    <p class="card-description mb-4">
-                      Use border utilities to quickly style the border and
-                      border-radius of an element. Great for images, buttons.
+                    <p className="card-description mb-4">
+                      {item.Body.slice(0, 100) + "..."}
                     </p>
-                    <div class="author align-items-center">
-                      <div class="stats">
+                    <div className="author align-items-center">
+                      <div className="stats">
                         <small>Posted on {item.PublishDate}</small>
                       </div>
                     </div>
@@ -175,7 +160,7 @@ export default function Blogs({ blogList }) {
 }
 
 export const getStaticProps = async () => {
-  const data = await fetch(`${STRAPI_URL}/articles`);
+  const data = await fetch(`${process.env.STRAPI_URL}/articles`);
   const blogList = await data.json();
 
   return {

@@ -1,10 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faHome,
-  faMap,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { FONTAWESOMEICON } from "../utils/fontawesome-icons";
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -35,7 +30,7 @@ export default function Contact() {
   };
 
   const onSubmit = (data) => {
-    fetch("api/contact", {
+    fetch("api/contact/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -246,21 +241,27 @@ export default function Contact() {
         </div>
       </header>
       {/* Contact header section */}
-      <section class="py-7 bg-white position-relative">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-5 mb-5">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center mb-4">
-                <i class="ni ni-single-02"></i>
-                <FontAwesomeIcon className=" ni text-sm" icon={faHome} />
+      <section className="py-7 bg-white position-relative">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-5 mb-5">
+              <div className="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+                <i className="ni ni-single-02"></i>
+                <FontAwesomeIcon
+                  className=" ni text-sm"
+                  icon={FONTAWESOMEICON.iconHome}
+                />
               </div>
               <h2>Visit Us</h2>
-              <p class="pe-5">Corporate office & R & D Office</p>
-              <div class="d-flex p-2">
+              <p className="pe-5">Corporate office & R & D Office</p>
+              <div className="d-flex p-2">
                 <div>
-                  <FontAwesomeIcon className=" fag text-sm" icon={faMap} />
+                  <FontAwesomeIcon
+                    className=" fag text-sm"
+                    icon={FONTAWESOMEICON.iconMap}
+                  />
                 </div>
-                <div class="ps-3">
+                <div className="ps-3">
                   <span>
                     Nasscom COE IOT, KEONICS, #29/A(E), 27th Main,
                     <br />
@@ -268,11 +269,14 @@ export default function Contact() {
                   </span>
                 </div>
               </div>
-              <div class="d-flex p-2">
+              <div className="d-flex p-2">
                 <div>
-                  <FontAwesomeIcon className=" fag text-sm" icon={faMap} />
+                  <FontAwesomeIcon
+                    className=" fag text-sm"
+                    icon={FONTAWESOMEICON.iconMap}
+                  />
                 </div>
-                <div class="ps-3">
+                <div className="ps-3">
                   <span>
                     Kerala Startup Mission - Accelerator for Electronics
                     <br />
@@ -283,31 +287,40 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-5">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center mb-4">
-                <FontAwesomeIcon className=" ni text-sm" icon={faPhone} />
+            <div className="col-lg-6 col-md-5">
+              <div className="icon icon-shape bg-gradient-primary shadow text-center mb-4">
+                <FontAwesomeIcon
+                  className=" ni text-sm"
+                  icon={FONTAWESOMEICON.iconPhone}
+                />
               </div>
               <h2>Get in Touch</h2>
-              <p class="pe-5">
+              <p className="pe-5">
                 Need other ways to get in touch with us? Please make use of the
                 phone numbers and official Auticare mail provided
               </p>
-              <div class="d-flex p-2">
+              <div className="d-flex p-2">
                 <div>
-                  <FontAwesomeIcon className=" fag text-sm" icon={faPhone} />
+                  <FontAwesomeIcon
+                    className=" fag text-sm"
+                    icon={FONTAWESOMEICON.iconPhone}
+                  />
                 </div>
-                <div class="ps-3">
+                <div className="ps-3">
                   <span>
                     (+91) 8792975982
                     <br /> (+91) 9895496049
                   </span>
                 </div>
               </div>
-              <div class="d-flex p-2">
+              <div className="d-flex p-2">
                 <div>
-                  <FontAwesomeIcon className=" fag text-sm" icon={faEnvelope} />
+                  <FontAwesomeIcon
+                    className=" fag text-sm"
+                    icon={FONTAWESOMEICON.iconEnvelope}
+                  />
                 </div>
-                <div class="ps-3">
+                <div className="ps-3">
                   <span>auticare@embrightinfotech.com</span>
                 </div>
               </div>

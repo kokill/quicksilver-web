@@ -1,13 +1,6 @@
-import {
-  faDonate,
-  faHeadset,
-  faPaste,
-  faTasks,
-  faUsers,
-  faUserSecret,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { FONTAWESOMEICON } from "../utils/fontawesome-icons";
 
 export default function Coaching() {
   return (
@@ -62,7 +55,10 @@ export default function Coaching() {
             <div className="col-lg-4 col-md-6 mt-3">
               <div className="info">
                 <div className="icon icon-shape-sm mx-auto">
-                  <FontAwesomeIcon className="text-primary" icon={faUsers} />
+                  <FontAwesomeIcon
+                    className="text-primary"
+                    icon={FONTAWESOMEICON.iconUsers}
+                  />
                 </div>
                 <p className="mt-3">
                   Modules and sessions prepared by Experienced Psychologists &
@@ -73,7 +69,10 @@ export default function Coaching() {
             <div className="col-lg-4 col-md-6 mt-3">
               <div className="info">
                 <div className="icon icon-shape-sm mx-auto">
-                  <FontAwesomeIcon className="text-primary" icon={faDonate} />
+                  <FontAwesomeIcon
+                    className="text-primary"
+                    icon={FONTAWESOMEICON.iconDonate}
+                  />
                 </div>
                 <p className="mt-3">Easy and Cost Effective</p>
               </div>
@@ -81,7 +80,10 @@ export default function Coaching() {
             <div className="col-lg-4 col-md-6 mt-3">
               <div className="info">
                 <div className="icon icon-shape-sm mx-auto">
-                  <FontAwesomeIcon className="text-primary" icon={faPaste} />
+                  <FontAwesomeIcon
+                    className="text-primary"
+                    icon={FONTAWESOMEICON.iconPaste}
+                  />
                 </div>
                 <p className="mt-3">Evidence Based Practice</p>
               </div>
@@ -89,7 +91,10 @@ export default function Coaching() {
             <div className="col-lg-4 col-md-6 mt-3">
               <div className="info">
                 <div className="icon icon-shape-sm mx-auto">
-                  <FontAwesomeIcon className="text-primary" icon={faHeadset} />
+                  <FontAwesomeIcon
+                    className="text-primary"
+                    icon={FONTAWESOMEICON.iconHeadset}
+                  />
                 </div>
                 <p className="mt-3">Assistive Tech Orientation & Support</p>
               </div>
@@ -97,7 +102,10 @@ export default function Coaching() {
             <div className="col-lg-4 col-md-6 mt-3">
               <div className="info">
                 <div className="icon icon-shape-sm mx-auto">
-                  <FontAwesomeIcon className="text-primary" icon={faTasks} />
+                  <FontAwesomeIcon
+                    className="text-primary"
+                    icon={FONTAWESOMEICON.iconTasks}
+                  />
                 </div>
                 <p className="mt-3">Progress Tracking & Reporting</p>
               </div>
@@ -107,7 +115,7 @@ export default function Coaching() {
                 <div className="icon icon-shape-sm mx-auto">
                   <FontAwesomeIcon
                     className="text-primary"
-                    icon={faUserSecret}
+                    icon={FONTAWESOMEICON.iconSecret}
                   />
                 </div>
                 <p className="mt-3">Ensured Privacy & Confidentiality</p>

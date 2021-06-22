@@ -1,11 +1,5 @@
-import {
-  faAddressCard,
-  faArrowRight,
-  faCalendarCheck,
-  faClipboard,
-  faMoneyCheckAlt,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FONTAWESOMEICON } from "../utils/fontawesome-icons";
 import Image from "next/image";
 
 export default function Consultation() {
@@ -317,7 +311,7 @@ export default function Consultation() {
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faMoneyCheckAlt}
+                    icon={FONTAWESOMEICON.iconMoneyCheckAlt}
                   />
                 </div>
                 <a>
@@ -327,7 +321,7 @@ export default function Consultation() {
                   </h5>
                   <FontAwesomeIcon
                     className="arrow-right"
-                    icon={faArrowRight}
+                    icon={FONTAWESOMEICON.iconArrowRight}
                   />
                 </a>
               </div>
@@ -337,7 +331,7 @@ export default function Consultation() {
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faClipboard}
+                    icon={FONTAWESOMEICON.iconClipboard}
                   />
                 </div>
                 <a>
@@ -348,7 +342,7 @@ export default function Consultation() {
                   </h5>
                   <FontAwesomeIcon
                     className="arrow-right"
-                    icon={faArrowRight}
+                    icon={FONTAWESOMEICON.iconArrowRight}
                   />
                 </a>
               </div>
@@ -358,7 +352,7 @@ export default function Consultation() {
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faCalendarCheck}
+                    icon={FONTAWESOMEICON.iconCalenderCheck}
                   />
                 </div>
                 <a>
@@ -369,7 +363,7 @@ export default function Consultation() {
                   </h5>
                   <FontAwesomeIcon
                     className="arrow-right"
-                    icon={faArrowRight}
+                    icon={FONTAWESOMEICON.iconArrowRight}
                   />
                 </a>
               </div>
@@ -379,7 +373,7 @@ export default function Consultation() {
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faAddressCard}
+                    icon={FONTAWESOMEICON.iconAddressCard}
                   />
                 </div>
                 <a>
@@ -390,7 +384,7 @@ export default function Consultation() {
                   </h5>
                   <FontAwesomeIcon
                     className="arrow-right"
-                    icon={faArrowRight}
+                    icon={FONTAWESOMEICON.iconArrowRight}
                   />
                 </a>
               </div>

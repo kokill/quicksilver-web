@@ -1,6 +1,6 @@
-import { STRAPI_URL } from "../../utils/next.config";
 import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 export default function Blog({ blogData }) {
   return (
@@ -8,26 +8,26 @@ export default function Blog({ blogData }) {
       {/* Header section */}
       <header>
         <div
-          class="page-header section-height-75"
+          className="page-header section-height-75"
           style={{
             backgroundImage: "url(/images/blog/blog-section-cover.webp)",
           }}
         >
-          <span class="mask bg-gradient-dark"></span>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto text-white text-center">
-                <h2 class="text-white">{blogData.Title}</h2>
+          <span className="mask bg-gradient-dark"></span>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 mx-auto text-white text-center">
+                <h2 className="text-white">{blogData.Title}</h2>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="position-relative overflow-hidden"
+          className="position-relative overflow-hidden"
           style={{ height: "36px", marginTop: "-35px" }}
         >
           <div
-            class="w-full absolute bottom-0 start-0 end-0"
+            className="w-full absolute bottom-0 start-0 end-0"
             style={{
               transform: "scale(2)",
               transformOrigin: "top center",
@@ -48,32 +48,35 @@ export default function Blog({ blogData }) {
         </div>
       </header>
       {/* Header section */}
-      
+
       {/* Blog body */}
-      <section class="py-5 bg-gray-100">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-              <div class="card card-blog card-plain">
-                <div class="position-relative">
-                  <a class="d-block blur-shadow-image">
+      <section className="py-5 bg-gray-100">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 mx-auto text-center">
+              <div className="card card-blog card-plain">
+                <div className="position-relative">
+                  <a className="d-block blur-shadow-image">
                     <Image
                       src={blogData.CoverImage.url}
                       alt="img-blur-shadow"
-                      class="img-fluid shadow border-radius-lg"
+                      className="img-fluid shadow border-radius-lg"
                       width={720}
                       height={540}
                       layout="responsive"
                     />
                   </a>
                 </div>
-                <div class="card-body px-0 pt-4">
-                  <p class="text-gradient text-primary text-gradient font-weight-bold text-sm text-uppercase">
+                <div className="card-body px-0 pt-4">
+                  <p className="text-gradient text-primary text-gradient font-weight-bold text-sm text-uppercase">
                     {blogData.publishDate}
                   </p>
-                  <p>{blogData.Body}</p>
+                  <ReactMarkdown className="text-justify">{blogData.Body}</ReactMarkdown>
                   <Link href="/blogs">
-                    <button type="button" class="btn bg-gradient-primary mt-3">
+                    <button
+                      type="button"
+                      className="btn bg-gradient-primary mt-3"
+                    >
                       Back to Blogs
                     </button>
                   </Link>
@@ -89,7 +92,7 @@ export default function Blog({ blogData }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`${STRAPI_URL}/articles`);
+  const res = await fetch(`${process.env.STRAPI_URL}/articles`);
   const blogList = await res.json();
 
   return {
@@ -103,7 +106,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(`${STRAPI_URL}/articles?id=${params.slug}`);
+  const data = await fetch(
+    `${process.env.STRAPI_URL}/articles?id=${params.slug}`
+  );
   const blogData = await data.json();
 
   return {

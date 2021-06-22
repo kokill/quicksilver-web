@@ -1,23 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faVrCardboard,
-  faBrain,
-  faMicrochip,
-  faClipboard,
-  faCrown,
-  faFeatherAlt,
-  faChalkboardTeacher,
-  faLaugh,
-  faUserFriends,
-  faDonate,
-  faChartLine,
-  faAward,
-  faPlayCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import { faHive } from "@fortawesome/free-brands-svg-icons";
 import React, { useEffect, useState } from "react";
 import { Entity, Scene } from "aframe-react";
 import Image from "next/image";
+import { FONTAWESOMEICON } from "../utils/fontawesome-icons";
 
 export default function Home() {
   const [appRendered, setAppRendered] = useState(false);
@@ -44,7 +29,8 @@ export default function Home() {
               ms-n6
             "
               style={{
-                backgroundImage: "url(/images/home/home-hero-section-cover.webp)",
+                backgroundImage:
+                  "url(/images/home/home-hero-section-cover.webp)",
               }}
             ></div>
           </div>
@@ -121,7 +107,7 @@ export default function Home() {
                 >
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faVrCardboard}
+                    icon={FONTAWESOMEICON.iconVrCardboard}
                   />
                 </div>
                 <div className="description ps-3">
@@ -143,7 +129,10 @@ export default function Home() {
                   text-center
                 "
                 >
-                  <FontAwesomeIcon className="fa fas text-sm" icon={faBrain} />
+                  <FontAwesomeIcon
+                    className="fa fas text-sm"
+                    icon={FONTAWESOMEICON.iconBrain}
+                  />
                 </div>
                 <div className="description ps-3">
                   <p className="mb-0">
@@ -165,7 +154,7 @@ export default function Home() {
                 >
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faMicrochip}
+                    icon={FONTAWESOMEICON.iconMicrochip}
                   />
                 </div>
                 <div className="description ps-3">
@@ -205,7 +194,10 @@ export default function Home() {
             <div className="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">
               <div className="p-3 pt-0">
                 <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
-                  <FontAwesomeIcon className="ni text-sm" icon={faFeatherAlt} />
+                  <FontAwesomeIcon
+                    className="ni text-sm"
+                    icon={FONTAWESOMEICON.iconFeather}
+                  />
                 </div>
                 <h4 className="text-gradient text-primary mb-0">Autilite</h4>
                 <h4 className="mb-4">Home based therapy</h4>
@@ -231,7 +223,10 @@ export default function Home() {
             <div className="col-lg-5 col-md-12 me-auto">
               <div className="p-3 pt-0">
                 <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
-                  <FontAwesomeIcon className="ni text-sm" icon={faClipboard} />
+                  <FontAwesomeIcon
+                    className="ni text-sm"
+                    icon={FONTAWESOMEICON.iconClipboard}
+                  />
                 </div>
                 <h4 className="text-gradient text-primary mb-0">
                   Auticare Standard
@@ -289,7 +284,10 @@ export default function Home() {
             <div className="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">
               <div className="p-3 pt-0">
                 <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
-                  <FontAwesomeIcon className="ni text-sm" icon={faCrown} />
+                  <FontAwesomeIcon
+                    className="ni text-sm"
+                    icon={FONTAWESOMEICON.iconCrown}
+                  />
                 </div>
                 <h4 className="text-gradient text-primary mb-0">
                   Auticare Premium
@@ -319,7 +317,7 @@ export default function Home() {
                 <div className="icon icon-shape bg-gradient-primary rounded-circle shadow text-center mb-4">
                   <FontAwesomeIcon
                     className="ni text-sm"
-                    icon={faChalkboardTeacher}
+                    icon={FONTAWESOMEICON.iconChalkboardTeacher}
                   />
                 </div>
                 <h4 className="text-gradient text-primary mb-0">
@@ -379,7 +377,10 @@ export default function Home() {
             <div className="col-lg-4 col-md-6">
               <div className="p-3 text-center">
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
-                  <FontAwesomeIcon className="fa fas text-sm" icon={faLaugh} />
+                  <FontAwesomeIcon
+                    className="fa fas text-sm"
+                    icon={FONTAWESOMEICON.iconLaugh}
+                  />
                 </div>
                 <h5 className="mt-4">Safe & Fun</h5>
                 <p>
@@ -393,7 +394,7 @@ export default function Home() {
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faUserFriends}
+                    icon={FONTAWESOMEICON.iconUserFriends}
                   />
                 </div>
                 <h5 className="mt-4">Parental Involvement</h5>
@@ -406,7 +407,10 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 mx-md-auto">
               <div className="p-3 text-center">
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
-                  <FontAwesomeIcon className="fa fas text-sm" icon={faDonate} />
+                  <FontAwesomeIcon
+                    className="fa fas text-sm"
+                    icon={FONTAWESOMEICON.iconDonate}
+                  />
                 </div>
                 <h5 className="mt-4">Affordable & Immersive</h5>
                 <p>
@@ -423,7 +427,7 @@ export default function Home() {
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
                   <FontAwesomeIcon
                     className="fa fas text-sm"
-                    icon={faChartLine}
+                    icon={FONTAWESOMEICON.iconChartLine}
                   />
                 </div>
                 <h5 className="mt-4">
@@ -439,7 +443,10 @@ export default function Home() {
             <div className="col-lg-4 col-md-6">
               <div className="p-3 text-center">
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
-                  <FontAwesomeIcon className="fa fas text-sm" icon={faAward} />
+                  <FontAwesomeIcon
+                    className="fa fas text-sm"
+                    icon={FONTAWESOMEICON.iconAward}
+                  />
                 </div>
                 <h5 className="mt-4">
                   Replayable VR scenarios and level based assessment
@@ -453,7 +460,10 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 mx-md-auto">
               <div className="p-3 text-center">
                 <div className="icon icon-shape bg-gradient-primary shadow mx-auto">
-                  <FontAwesomeIcon className="fa fas text-sm" icon={faHive} />
+                  <FontAwesomeIcon
+                    className="fa fas text-sm"
+                    icon={FONTAWESOMEICON.iconHive}
+                  />
                 </div>
                 <h5 className="mt-4">Customizable contents</h5>
                 <p>
@@ -494,7 +504,7 @@ export default function Home() {
                     <a id="targetVRButton" className="aframe-btn-cursor">
                       <FontAwesomeIcon
                         className="aframe-btn"
-                        icon={faPlayCircle}
+                        icon={FONTAWESOMEICON.iconPlayCircle}
                       />
                     </a>
                   </div>

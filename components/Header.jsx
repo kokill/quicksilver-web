@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Meta from "./meta";
+import Meta from "./Meta";
 
 export default function HeaderComponent() {
   return (

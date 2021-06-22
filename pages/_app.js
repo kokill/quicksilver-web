@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import * as gtag from '../lib/gtag'
 
-const LayoutModule = dynamic(import("../Layout/layout"));
+const LayoutModule = dynamic(import("../layout/Layout"));
 
 // Bootstrap 5
 import "bootstrap/dist/css/bootstrap.css";

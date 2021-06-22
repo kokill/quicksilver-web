@@ -1,12 +1,7 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagramSquare,
-  faLinkedinIn,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { FONTAWESOMEICON } from "../utils/fontawesome-icons";
+import { SOCIAL_LINKS } from "../utils/social-links";
 
 export default function FooterComponent() {
   return (
@@ -28,65 +23,65 @@ export default function FooterComponent() {
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://www.facebook.com/MyAuticare"
+                      href={SOCIAL_LINKS.facebook}
                       target="_blank"
                       rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
-                        icon={faFacebook}
+                        icon={FONTAWESOMEICON.iconFacebook}
                       />
                     </a>
                   </li>
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://twitter.com/embrightinfotec"
+                      href={SOCIAL_LINKS.twitter}
                       target="_blank"
                       rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
-                        icon={faTwitter}
+                        icon={FONTAWESOMEICON.iconTwitter}
                       />
                     </a>
                   </li>
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://www.youtube.com/channel/UCarMIgou5Ia5hlgyij69nCQ/videos"
+                      href={SOCIAL_LINKS.youtube}
                       target="_blank"
                       rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
-                        icon={faYoutube}
+                        icon={FONTAWESOMEICON.iconYoutube}
                       />
                     </a>
                   </li>
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://www.instagram.com/my_auticare/"
+                      href={SOCIAL_LINKS.instagram}
                       target="_blank"
                       rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
-                        icon={faInstagramSquare}
+                        icon={FONTAWESOMEICON.iconInstagram}
                       />
                     </a>
                   </li>
                   <li className="nav-item">
                     <a
                       className="nav-link pe-1"
-                      href="https://www.linkedin.com/mwlite/company/embrightinfotech"
+                      href={SOCIAL_LINKS.linkedin}
                       target="_blank"
                       rel="noopener"
                     >
                       <FontAwesomeIcon
                         className="social text-lg opacity-8"
-                        icon={faLinkedinIn}
+                        icon={FONTAWESOMEICON.iconLinkedin}
                       />
                     </a>
                   </li>
@@ -245,7 +240,7 @@ export default function FooterComponent() {
                 <p className="my-4 text-sm">
                   &copy; Auticare assistive technology platform by
                   <a
-                    href="https://embrightinfotech.com/"
+                    href={SOCIAL_LINKS.embright}
                     target="_blank"
                     rel="noopener"
                   >
