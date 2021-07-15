@@ -97,8 +97,7 @@ export default function Contact() {
                   <div className="text-center">
                     <h3 className="text-gradient text-primary">Contact us</h3>
                     <p className="mb-0">
-                      For further questions, regarding Auticare and other
-                      services provided by us contact using our contact form
+                      For further questions, regarding services provided by us contact using our contact form
                     </p>
                   </div>
 
@@ -296,8 +295,7 @@ export default function Contact() {
               </div>
               <h2>Get in Touch</h2>
               <p className="pe-5">
-                Need other ways to get in touch with us? Please make use of the
-                phone numbers and official Auticare mail provided
+                Please make use of the phone numbers and mail provided
               </p>
               <div className="d-flex p-2">
                 <div>
@@ -321,7 +319,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="ps-3">
-                  <span>auticare@embrightinfotech.com</span>
+                  <span>contact@quicksilverteam.com</span>
                 </div>
               </div>
             </div>

@@ -3,7 +3,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FONTAWESOMEICON } from "../utils/fontawesome-icons";
 import { SOCIAL_LINKS } from "../utils/social-links";
 
+const items = [
+  { text: 'PHP Development', link: '' },
+  { text: 'AngularJS Development', link: '' },
+  { text: 'ReactJS Development', link: '' },
+  { text: 'React Native Development', link: '' },
+  { text: 'Node JS Development', link: '' },
+  { text: 'Android Development', link: '' },
+  { text: 'MERN Stack Development', link: '' },
+  { text: 'Electron App Development', link: '' },
+  { text: 'WordPress Development', link: '' },
+  { text: 'Laravel Development', link: '' },
+  { text: 'iOS Development', link: '' },
+  { text: 'Blockchain Development', link: '' },
+  { text: 'Mobile App Development', link: '' },
+  { text: 'DevOps Development', link: '' },
+  { text: 'Website SEO', link: '' },
+];
+
 export default function FooterComponent() {
+  const year = new Date().getFullYear();
+  
   return (
     <>
       {/* Footer section */}
@@ -14,7 +34,7 @@ export default function FooterComponent() {
             <div className="col-md-3 mb-4 ms-auto">
               <div>
                 <h6 className="text-gradient text-primary font-weight-bolder">
-                  Auticare Assistive Technology Platform
+                  Quicksilver Team
                 </h6>
               </div>
               <div>
@@ -99,7 +119,7 @@ export default function FooterComponent() {
                   </li>
                   <li className="nav-item">
                     <Link href="/consultation">
-                      <a className="nav-link">Consultation</a>
+                      <a className="nav-link">Careers</a>
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -118,39 +138,19 @@ export default function FooterComponent() {
             <div className="col-md-2 col-sm-6 col-6 mb-4">
               <div>
                 <h6 className="text-gradient text-primary text-sm">
-                  Resources
+                  Services
                 </h6>
                 <ul className="flex-column ms-n3 nav">
-                  <li className="nav-item">
+                  {items.map(item => <li key={item.text} className="nav-item">
                     <a
                       className="nav-link"
                       href="https://iradesign.io/"
                       target="_blank"
                       rel="noopener"
                     >
-                      Illustrations
+                      {item.text}
                     </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/bits"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Bits & Snippets
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="https://www.creative-tim.com/affiliates/new"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Affiliate Program
-                    </a>
-                  </li>
+                  </li>)}
                 </ul>
               </div>
             </div>
@@ -161,19 +161,19 @@ export default function FooterComponent() {
                 </h6>
                 <ul className="flex-column ms-n3 nav">
                   <li className="nav-item">
-                    <Link href="/contact">
-                      <a className="nav-link">Contact Us</a>
-                    </Link>
-                  </li>
-                  <li className="nav-item">
                     <a
                       className="nav-link"
                       href="https://www.creative-tim.com/knowledge-center"
                       target="_blank"
                       rel="noopener"
                     >
-                      Knowledge Center
+                      About Us
                     </a>
+                  </li>
+                  <li className="nav-item">
+                    <Link href="/contact">
+                      <a className="nav-link">Contact Us</a>
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <a
@@ -182,7 +182,7 @@ export default function FooterComponent() {
                       target="_blank"
                       rel="noopener"
                     >
-                      Custom Development
+                      FAQ
                     </a>
                   </li>
                   <li className="nav-item">
@@ -192,7 +192,7 @@ export default function FooterComponent() {
                       target="_blank"
                       rel="noopener"
                     >
-                      Sponsorships
+                      Policy
                     </a>
                   </li>
                 </ul>
@@ -238,14 +238,7 @@ export default function FooterComponent() {
             <div className="col-12">
               <div className="text-center">
                 <p className="my-4 text-sm">
-                  &copy; Auticare assistive technology platform by
-                  <a
-                    href={SOCIAL_LINKS.embright}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    &#160;Embright Infotech.
-                  </a>
+                  &copy; {year} Quicksilver Technologies Pvt. Ltd.
                 </p>
               </div>
             </div>

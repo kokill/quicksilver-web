@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Entity, Scene } from "aframe-react";
 import Image from "next/image";
+import Technologies from "../components/Technologies";
 import { FONTAWESOMEICON } from "../utils/fontawesome-icons";
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
             "
               style={{
                 backgroundImage:
-                  "url(/images/home/home-hero-section-cover.webp)",
+                  "url(/images/common/cover.png)",
               }}
             ></div>
           </div>
@@ -45,19 +46,19 @@ export default function Home() {
                 flex-column
               "
               >
-                <h1 className="text-gradient text-primary">Auticare</h1>
-                <h1 className="mb-4">Empowering Independence</h1>
+                <h1 className="text-gradient text-primary">Quicksilver Teams</h1>
+                <h1 className="mb-4">Serving the clients across multiple domains</h1>
                 <p className="lead pe-md-5 me-md-5">
-                  Auticare is an XR-AI based Assistive Technology learning
-                  platform for Autism Spectrum Disorder(ASD) and special
-                  education.
+                  We are a team of highly skilled developers, designers and strategists.
+                  Our main Domain is Web Design, App Development, Digital Marketing, Product Design and Cloud Services.
+                  Customer Satisfaction and the Highest rate of Customer Repeatability make us one of the pioneers in the field. 
                 </p>
                 <div className="buttons">
                   <button
                     type="button"
                     className="btn bg-gradient-primary mt-4"
                   >
-                    Get Started
+                    Contact us
                   </button>
                   <button
                     type="button"
@@ -78,7 +79,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6">
               <h3 className="text-gradient text-primary mb-0 mt-2">
-                Read More About Auticare
+                Read More About Quicksilver
               </h3>
               <h3>The most important</h3>
               <p>
@@ -365,12 +366,9 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mx-auto text-center pb-4">
-              <h4 className="text-gradient text-primary">Why</h4>
-              <h2>Auticare ?</h2>
-              <p className="lead">
-                What are the factors that keep us one step ahead of our
-                competitors ?
-              </p>
+              {/* <h4 className="text-gradient text-primary">Why</h4> */}
+              <h2>What we can do for you</h2>
+              {/* <p className="lead"> What are the factors that keep us one step ahead of our competitors ?</p> */}
             </div>
           </div>
           <div className="row">
@@ -382,7 +380,7 @@ export default function Home() {
                     icon={FONTAWESOMEICON.iconLaugh}
                   />
                 </div>
-                <h5 className="mt-4">Safe & Fun</h5>
+                <h5 className="mt-4">Web Development</h5>
                 <p>
                   Doctors guided modules ensures a safe and fun environment for
                   special children
@@ -397,7 +395,7 @@ export default function Home() {
                     icon={FONTAWESOMEICON.iconUserFriends}
                   />
                 </div>
-                <h5 className="mt-4">Parental Involvement</h5>
+                <h5 className="mt-4">Mobile App Developement</h5>
                 <p>
                   Home based therapy helps kids to enjoy the learning with
                   support of their parents
@@ -412,7 +410,7 @@ export default function Home() {
                     icon={FONTAWESOMEICON.iconDonate}
                   />
                 </div>
-                <h5 className="mt-4">Affordable & Immersive</h5>
+                <h5 className="mt-4">DevOps Development</h5>
                 <p>
                   Your special one now can experience an affordable interactive
                   3D virtual scenarios that trains them in skills essential in
@@ -431,7 +429,7 @@ export default function Home() {
                   />
                 </div>
                 <h5 className="mt-4">
-                  Enhanced Diagnosis & Therapy Productivity
+                  UI/UX Designing
                 </h5>
                 <p>
                   Doctors and therapists can now get faster response feedback
@@ -449,7 +447,7 @@ export default function Home() {
                   />
                 </div>
                 <h5 className="mt-4">
-                  Replayable VR scenarios and level based assessment
+                  Blockchain Development
                 </h5>
                 <p>
                   Allows the user to master skills and record the performance
@@ -465,7 +463,7 @@ export default function Home() {
                     icon={FONTAWESOMEICON.iconHive}
                   />
                 </div>
-                <h5 className="mt-4">Customizable contents</h5>
+                <h5 className="mt-4">SEO Services</h5>
                 <p>
                   Provides VR scenarios according to the individual requirements
                 </p>
@@ -480,54 +478,15 @@ export default function Home() {
       <section className="py-4">
         <div className="container py-5">
           <div className="row align-items-center text-center">
-            <h4 className="text-gradient text-primary">
-              Ready for Auticare Demo ?
-            </h4>
-            <h2>Try it Out</h2>
+            {/* <h4 className="text-gradient text-primary">Ready for Auticare Demo ?</h4> */}
+            <h2>Technologies we work with</h2>
             <p className="lead mb-5">
               For your best experience use a device which supports
               <br />
               VR capabilities to experience the demo
             </p>
             <div className="col-md-12">
-              <div className="card p-0 rounded-3">
-                <div className="blur-shadow-image">
-                  <div className="aframe-custom-btn">
-                    <Image
-                      src="/images/scenes/aframe-cover-img.webp"
-                      alt="img-blur-shadow"
-                      className="img-fluid shadow rounded-3"
-                      width={1280}
-                      height={720}
-                      layout="responsive"
-                    />
-                    <a id="targetVRButton" className="aframe-btn-cursor">
-                      <FontAwesomeIcon
-                        className="aframe-btn"
-                        icon={FONTAWESOMEICON.iconPlayCircle}
-                      />
-                    </a>
-                  </div>
-                  {appRendered && (
-                    <Scene embedded vr-mode-ui="enterVRButton: #targetVRButton">
-                      <a-assets>
-                        <img
-                          id="city"
-                          crossOrigin="anonymous"
-                          src={`/images/scenes/alphabet.png`}
-                        />
-                      </a-assets>
-                      <Entity
-                        primitive="a-sky"
-                        id="image-360"
-                        radius="100"
-                        src="#city"
-                      />
-                      <Entity primitive="a-camera" camera look-controls />
-                    </Scene>
-                  )}
-                </div>
-              </div>
+              <Technologies />
             </div>
           </div>
         </div>
